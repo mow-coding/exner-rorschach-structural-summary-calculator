@@ -1,5 +1,7 @@
 # [2026-07-11] v2.1.8 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 ## 먼저 확인하실 점
 
 v2.1.8은 AI 도우미가 사용하는 다섯 언어 참조 문서 1,015개의 내용과 검색 방식을 개선한 패치입니다.

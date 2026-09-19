@@ -1,5 +1,7 @@
 # v1.4.0
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 ## Metadata
 
 | Field | Value |

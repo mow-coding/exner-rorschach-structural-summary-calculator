@@ -1,5 +1,7 @@
 # [2026-04-27] v2.0.1 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.0.1은 v2.0.0 공개 이후 발견된 이용상의 문제를 수정한 패치입니다. 구조요약 계산, 참조 문서, BYOK 기반 코딩 도우미와 해석 도우미라는 제품 범위는 그대로 유지됩니다.
 
 ## 핵심 요약

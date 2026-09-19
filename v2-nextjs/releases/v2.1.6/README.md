@@ -1,5 +1,7 @@
 # [2026-07-04] v2.1.6 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.1.6은 다섯 언어 참조 문서 검색과 웹앱 보안을 개선한 패치입니다. 화면과 구조요약 계산식은 변경하지 않았습니다.
 
 ## 변경 사항

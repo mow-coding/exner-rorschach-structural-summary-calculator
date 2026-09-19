@@ -1,5 +1,7 @@
 # [2026-06-22] v2.1.0 마이너 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.1.0은 지원 브라우저에서 웹앱을 설치형 앱처럼 열 수 있게 하고, 공개 프로젝트 RorScore를 크레딧에 명시하며, AI가 코딩 질문에 알맞은 참조 문서를 먼저 찾도록 개선한 패치입니다.
 
 ## 핵심 요약
