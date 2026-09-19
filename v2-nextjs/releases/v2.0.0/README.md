@@ -1,5 +1,7 @@
 # [2026-02-15] v2.0.0 메이저 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.0.0은 v1.4.1을 새로운 웹앱으로 옮긴 첫 번째 버전 2 릴리즈입니다. v1의 핵심이었던 로샤 Exner(CS) 체계 구조요약 계산 흐름은 유지하면서 다국어 화면, 참조 문서 검색, BYOK 방식의 AI 보조 기능을 추가했습니다.
 
 이번 버전의 가장 큰 변화는 사용자가 본인의 OpenAI 또는 Google API 키를 연결해 AI 기능을 쓰는 BYOK(Bring Your Own Key) 방식입니다. AI 사용 비용은 연결한 계정에서 발생하며, API 키는 AI 연결이 유지되는 동안만 사용됩니다.
