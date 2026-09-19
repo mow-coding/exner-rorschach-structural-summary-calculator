@@ -8,160 +8,160 @@
 | --- | --- |
 | Version | `v1.4.0` |
 | Release date | 2026-01-03 |
-| Release type | 마이너 패치 |
+| Release type | マイナーリリース |
 | GAS deployment | [Open GAS app](https://script.google.com/macros/s/AKfycbxWtI1q27rXuH4feBEGpoy0fIhXZU0ROJ2gRv5RbaQVPxnNgznTI9czHDrVzaS7wSMM/exec) |
 
 ## Patch Notes
 
-# 주요 수정사항
+# 主な修正点
 
-## *개요*
+## *概要*
 
-1.4.0 마이너 패치가 적용되었습니다.
+1.4.0 マイナーリリースを適用しました。
 
-> **다국어 지원 기능을 추가했습니다.**
+> **多言語対応機能を追加しました。**
 >
-- 한국어, 영어, 일본어, 스페인어, 포르투갈어 5개 언어를 지원합니다.
+- 韓国語、英語、日本語、スペイン語、ポルトガル語の 5 言語に対応します。
 
-    웹앱 우측 상단에 언어 선택 버튼(🌐)을 추가하여 언제든지 언어를 전환할 수 있습니다.
+    ウェブアプリの右上に言語選択ボタン（🌐）を追加し、いつでも言語を切り替えられます。
 
-- 모든 UI 텍스트, 모달 메시지, 안내 문구, 슬롯 경고 메시지, 푸터 텍스트가 5개 언어로 번역되었습니다.
-- 더보기 탭의 모든 항목 설명이 5개 언어로 번역되었습니다.
+- すべての UI テキスト、モーダルのメッセージ、案内文、スロットの警告メッセージ、フッターのテキストを 5 言語に翻訳しました。
+- 「もっと見る」タブのすべての項目説明を 5 言語に翻訳しました。
 
-또한 일련의 변경점은 [Gems 챗봇](https://gemini.google.com/gem/1QDCPHshPvq5J9iIKeV-1Nvy0EFzKPN6Y?usp=sharing)에 반영되었습니다.
+これらの変更点は [Gems チャットボット](https://gemini.google.com/gem/1QDCPHshPvq5J9iIKeV-1Nvy0EFzKPN6Y?usp=sharing) にも反映されています。
 
 ---
 
-## *세부사항*
+## *詳細*
 
-### *다국어 지원 기능 추가*
+### *多言語対応機能の追加*
 
-웹앱에 5개 언어(한국어, 영어, 일본어, 스페인어, 포르투갈어) 지원 기능을 추가하고,
+ウェブアプリに 5 言語（韓国語、英語、日本語、スペイン語、ポルトガル語）の対応機能を追加し、
 
-모든 UI 텍스트를 번역했습니다.
+すべての UI テキストを翻訳しました。
 
-> **언어 선택 버튼**
+> **言語選択ボタン**
 >
-- 웹앱 우측 상단에 지구본 아이콘(🌐) 버튼 추가
-- 페이지 로드 시 JavaScript가 `language-selector-collapsed` 클래스를 추가하여 버튼 표시
-- 초기 모달이 열려 있어도 언어 선택 버튼이 모달 위에 표시됨 (z-index: 10001 > 1000)
-- 초기 모달이 닫힌 후에도 언어 선택 버튼이 계속 표시됨
-- 마우스 호버 시 언어 선택 옵션(한국어, English, 日本語, Español, Português) 표시
-- 선택한 언어는 로컬 스토리지에 저장되어 다음 방문 시에도 유지됨
+- ウェブアプリの右上に地球儀アイコン（🌐）のボタンを追加
+- ページ読み込み時に JavaScript が `language-selector-collapsed` クラスを追加してボタンを表示
+- 初期モーダルが開いていても、言語選択ボタンがモーダルの上に表示される（z-index: 10001 > 1000）
+- 初期モーダルを閉じた後も言語選択ボタンが表示され続ける
+- マウスを乗せると言語の選択肢（한국어、English、日本語、Español、Português）を表示
+- 選択した言語はローカルストレージに保存され、次回の訪問時にも維持される
 
-> **기술적 세부사항**
+> **技術的な詳細**
 >
-- 번역 데이터 구조
+- 翻訳データの構造
 
     ---
 
-    - `translations` 객체: 기본 UI 텍스트 번역 (201개 항목)
+    - `translations` オブジェクト: 基本 UI テキストの翻訳（201 項目）
 
         ---
 
-        - 애플리케이션 기본 요소 (app_title, tab_scoring, tab_notice)
-        - 버튼 텍스트 (btn_calc, btn_reset, btn_add, btn_del)
-        - 초기 접속 모달 (modal_welcome_title, modal_welcome_new, modal_welcome_load, modal_welcome_provider 등)
-        - 초기화 확인 모달 (modal_reset_title, modal_reset_msg, modal_reset_yes, modal_reset_no)
-        - AI 해석 요청 모달 (modal_ai_title, modal_ai_msg, modal_ai_open, modal_ai_cancel)
-        - 링크 및 기타 (link_manual, link_bug, link_patch, link_lab, link_privacy)
-        - 개인정보처리방침 (privacy_title, privacy_notice_title, privacy_notice_text)
-        - 안내 메시지 (list_header, loader_calc, loader_sub, guide_response, tooltip_info)
-        - 결과 화면 탭 및 버튼 (tab_upper, tab_lower, tab_special, btn_rawdata, btn_summary, btn_print, btn_ai)
-        - Special Indices 체크박스 라벨 (scon_main, scon_note, depi_main, cdi_main, hvi_main, obs_main, obs_r1, obs_r2, obs_r3)
-        - 슬롯 경고 메시지 (toast_warning_over_scoring, toast_warning_category_dup, toast_warning_hierarchy, toast_warning_too_many_responses, toast_warning_validity, toast_info_reset 및 각 메시지 텍스트)
-        - 푸터 텍스트 (footer_title, footer_copyright)
+        - アプリケーションの基本要素（app_title、tab_scoring、tab_notice）
+        - ボタンのテキスト（btn_calc、btn_reset、btn_add、btn_del）
+        - 初回アクセスのモーダル（modal_welcome_title、modal_welcome_new、modal_welcome_load、modal_welcome_provider など）
+        - 初期化確認のモーダル（modal_reset_title、modal_reset_msg、modal_reset_yes、modal_reset_no）
+        - AI 解釈依頼のモーダル（modal_ai_title、modal_ai_msg、modal_ai_open、modal_ai_cancel）
+        - リンクおよびその他（link_manual、link_bug、link_patch、link_lab、link_privacy）
+        - プライバシーポリシー（privacy_title、privacy_notice_title、privacy_notice_text）
+        - 案内メッセージ（list_header、loader_calc、loader_sub、guide_response、tooltip_info）
+        - 結果画面のタブとボタン（tab_upper、tab_lower、tab_special、btn_rawdata、btn_summary、btn_print、btn_ai）
+        - Special Indices のチェックボックスのラベル（scon_main、scon_note、depi_main、cdi_main、hvi_main、obs_main、obs_r1、obs_r2、obs_r3）
+        - スロットの警告メッセージ（toast_warning_over_scoring、toast_warning_category_dup、toast_warning_hierarchy、toast_warning_too_many_responses、toast_warning_validity、toast_info_reset と各メッセージのテキスト）
+        - フッターのテキスト（footer_title、footer_copyright）
 
-    - `listTranslations` 객체: 더보기 탭 항목 설명 번역
+    - `listTranslations` オブジェクト: 「もっと見る」タブの項目説明の翻訳
 
         ---
 
-        - `category`: 카테고리 이름 (10개 카테고리)
-        - `categoryDesc`: 카테고리 설명 (10개 카테고리)
-        - `items`: 개별 항목 설명 (106개 항목)
+        - `category`: カテゴリ名（10 カテゴリ）
+        - `categoryDesc`: カテゴリの説明（10 カテゴリ）
+        - `items`: 個別項目の説明（106 項目）
 
 
-- 동적 텍스트 업데이트
-
-    ---
-
-    - `changeLanguage()` 함수: 언어 변경 시 모든 UI 텍스트를 동적으로 업데이트
-    - `updateAllTexts()` 함수: 현재 선택된 언어에 맞게 모든 텍스트 요소 업데이트
-    - `generateListTable()` 함수: 더보기 탭 테이블을 현재 언어로 재생성
-    - `updateLanguageButtons()` 함수: 언어 선택 버튼의 활성 상태 업데이트
-
-- 번역 함수
+- 動的なテキスト更新
 
     ---
 
-    - `t(key)`: 번역 키를 받아 현재 언어에 맞는 텍스트 반환
-    - `getTranslatedCategoryName()`: 카테고리 이름 번역 가져오기
-    - `getTranslatedCategoryDescription()`: 카테고리 설명 번역 가져오기
-    - `getTranslatedItemDescription()`: 개별 항목 설명 번역 가져오기
+    - `changeLanguage()` 関数: 言語変更時にすべての UI テキストを動的に更新
+    - `updateAllTexts()` 関数: 現在選択中の言語に合わせてすべてのテキスト要素を更新
+    - `generateListTable()` 関数: 「もっと見る」タブの表を現在の言語で再生成
+    - `updateLanguageButtons()` 関数: 言語選択ボタンのアクティブ状態を更新
+
+- 翻訳関数
+
+    ---
+
+    - `t(key)`: 翻訳キーを受け取り、現在の言語に合ったテキストを返す
+    - `getTranslatedCategoryName()`: カテゴリ名の翻訳を取得
+    - `getTranslatedCategoryDescription()`: カテゴリの説明の翻訳を取得
+    - `getTranslatedItemDescription()`: 個別項目の説明の翻訳を取得
 
 
-### *번역 현황 및 언어별 비교*
+### *翻訳状況と言語別の比較*
 
-모든 UI 요소와 더보기 탭 항목 설명이 5개 언어로 완전히 번역되었습니다.
+すべての UI 要素と「もっと見る」タブの項目説明が 5 言語に完全に翻訳されています。
 
-> 번역 완료 항목
+> 翻訳完了項目
 >
 >
 >
-> | 카테고리 | 완료 | 총계 |
+> | カテゴリ | 完了 | 合計 |
 > | --- | --- | --- |
-> | **기본 UI 텍스트** | 45개 | 45개 |
-> | **결과 화면 탭/버튼** | 7개 | 7개 |
-> | **체크박스 라벨** | 9개 | 9개 |
-> | **슬롯 경고 메시지** | 12개 | 12개 |
-> | **푸터 텍스트** | 2개 | 2개 |
-> | **카테고리 이름** | 10개 | 10개 |
-> | **카테고리 설명** | 10개 | 10개 |
-> | **항목 설명** | 106개 | 106개 |
-> | **총계** | **201개** | **201개** |
+> | **基本 UI テキスト** | 45 | 45 |
+> | **結果画面のタブ/ボタン** | 7 | 7 |
+> | **チェックボックスのラベル** | 9 | 9 |
+> | **スロットの警告メッセージ** | 12 | 12 |
+> | **フッターのテキスト** | 2 | 2 |
+> | **カテゴリ名** | 10 | 10 |
+> | **カテゴリの説明** | 10 | 10 |
+> | **項目の説明** | 106 | 106 |
+> | **合計** | **201** | **201** |
 >
-> > 언어별 번역 완성도
+> > 言語別の翻訳完成度
 > >
 > >
 > >
-> > | 언어 | 완료 | 완성도 |
+> > | 言語 | 完了 | 完成度 |
 > > | --- | --- | --- |
-> > | **한국어 (ko)** | 201개 | 100% ✅ |
-> > | **영어 (en)** | 201개 | 100% ✅ |
-> > | **일본어 (ja)** | 201개 | 100% ✅ |
-> > | **스페인어 (es)** | 201개 | 100% ✅ |
-> > | **포르투갈어 (pt)** | 201개 | 100% ✅ |
+> > | **韓国語 (ko)** | 201 | 100% ✅ |
+> > | **英語 (en)** | 201 | 100% ✅ |
+> > | **日本語 (ja)** | 201 | 100% ✅ |
+> > | **スペイン語 (es)** | 201 | 100% ✅ |
+> > | **ポルトガル語 (pt)** | 201 | 100% ✅ |
 > >
-> > ✅ **모든 언어의 번역이 완료되었습니다.**
+> > ✅ **すべての言語の翻訳が完了しました。**
 > >
 
-### *주요 UI 요소별 언어별 번역 비교*
+### *主な UI 要素の言語別翻訳比較*
 
-번역이 부족한 부분은 제보해주세요, 수정하겠습니다.
+翻訳が不十分な部分があればお知らせください。修正します。
 
-> **애플리케이션 기본 요소**
+> **アプリケーションの基本要素**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `app_title` | 로샤 구조 요약지 계산 프로그램 | Rorschach Structural Summary Calculator | ロールシャッハ構造一覧表計算プログラム | Calculadora del Sumario Estructural de Rorschach | Calculadora do Sumário Estrutural de Rorschach |
 | `tab_scoring` | 채점 & 구조 요약 | Scoring & Structural Summary | スコアリング & 構造一覧表 | Codificación y Sumario Estructural | Codificação e Sumário Estrutural |
 | `tab_notice` | 더보기 | More | その他 | Más | Mais |
 
-> **버튼 텍스트**
+> **ボタンのテキスト**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `btn_calc` | 결과 계산하기 | Calculate Results | 結果を計算する | Calcular Resultados | Calcular Resultados |
 | `btn_reset` | 입력값 초기화하기 | Reset Input | 入力をリセット | Restablecer Entrada | Redefinir Entrada |
 | `btn_add` | 추가 | Add | 追加 | Añadir | Adicionar |
 | `btn_del` | 삭제 | Delete | 削除 | Eliminar | Excluir |
 
-> **초기 접속 모달**
+> **初回アクセスのモーダル**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `modal_welcome_title` | 로샤 구조 요약지 계산 프로그램 | Rorschach Structural Summary Calculator | ロールシャッハ構造一覧表計算プログラム | Calculadora del Sumario Estructural de Rorschach | Calculadora do Sumário Estrutural de Rorschach |
 | `modal_welcome_new` | 새로 만들기 | Create New | 新規作成 | Crear Nuevo | Criar Novo |
@@ -170,30 +170,30 @@
 | `modal_welcome_continue` | 작업 이어하기 | Continue Work | 作業を続ける | Continuar Trabajo | Continuar Trabalho |
 | `modal_welcome_provider` | 서울임상심리연구소 제공 | Provided by Seoul Institute of Clinical Psychology | ソウル臨床心理研究所提供 | Proporcionado por Instituto de Psicología Clínica de Seúl | Fornecido por Instituto de Psicologia Clínica de Seul |
 
-> **초기화 확인 모달**
+> **初期化確認のモーダル**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `modal_reset_title` | 다시 한 번 확인해 주세요 | Please confirm again | 再確認してください | Por favor confirme de nuevo | Por favor, confirme novamente |
 | `modal_reset_msg` | 현재 입력된 모든 값들을 초기화 하시겠습니까? | Do you want to reset all current inputs? | 現在の入力値をすべてリセットしますか？ | ¿Desea restablecer todos los valores introducidos? | Deseja redefinir todos os valores inseridos? |
 | `modal_reset_yes` | 예 | Yes | はい | Sí | Sim |
 | `modal_reset_no` | 아니오 | No | いいえ | No | Não |
 
-> **AI 해석 요청 모달**
+> **AI 解釈依頼のモーダル**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `modal_ai_title` | 준비 단계: 이전 화면에서 초록색 버튼들을 눌러 csv 파일을 다운로드 해주세요. | Preparation Step: Please download the CSV file by clicking the green buttons on the previous screen. | 準備段階：前の画面の緑色のボタンを押してCSVファイルをダウンロードしてください。 | Paso de preparación: Descargue el archivo CSV haciendo clic en los botones verdes de la pantalla anterior. | Etapa de preparação: Baixe o arquivo CSV clicando nos botões verdes na tela anterior. |
 | `modal_ai_msg` | 현재 연결되는 AI 챗봇은 구글 계정이 있어야 사용 가능한 Gemini Gems입니다. | The AI chatbot currently connected is Gemini Gems, which requires a Google account. | 現在接続されているAIチャットボットは、Googleアカウントが必要なGemini Gemsです。 | El chatbot de IA conectado actualmente es Gemini Gems, que requiere una cuenta de Google. | O chatbot de IA conectado atualmente é Gemini Gems, que requer uma conta do Google. |
 | `modal_ai_open` | 새로운 창에서 열기 | Open in New Window | 新しいウィンドウで開く | Abrir en Nueva Ventana | Abrir em Nova Janela |
 | `modal_ai_cancel` | 결과 화면으로 돌아가기 | Return to Results | 結果画面に戻る | Volver a Resultados | Voltar para Resultados |
 
-> **링크 및 기타**
+> **リンクおよびその他**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `link_manual` | 프로그램 사용법 | User Manual | プログラムの使い方 | Manual de Usuario | Manual do Usuário |
 | `link_bug` | 버그 및 개선사항 제보 | Report Bugs & Improvements | バグ・改善報告 | Reportar Errores y Mejoras | Relatar Erros e Melhorias |
@@ -201,19 +201,19 @@
 | `link_lab` | 서울임상심리연구소 | Seoul Clinical Psychology Institute | ソウル臨床心理研究所 | Instituto de Psicología Clínica de Seúl | Instituto de Psicologia Clínica de Seul |
 | `link_privacy` | 개인정보처리방침 | Privacy Policy | 個人情報処理方針 | Política de Privacidad | Política de Privacidade |
 
-> **개인정보처리방침**
+> **プライバシーポリシー**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `privacy_title` | 개인정보처리방침 (Privacy Policy) | Privacy Policy | 個人情報処理方針 (Privacy Policy) | Política de Privacidad | Política de Privacidade |
 | `privacy_notice_title` | ※ 브라우저 저장소(LocalStorage) 사용 고지 | ※ Browser Storage (LocalStorage) Usage Notice | ※ ブラウザ保存域(LocalStorage)使用告知 | ※ Aviso de Uso de Almacenamiento del Navegador (LocalStorage) | ※ Aviso de Uso de Armazenamento do Navegador (LocalStorage) |
 | `privacy_notice_text` | 본 앱은 귀하의 채점 편의를 위해 '채점 & 구조 요약' 탭에 입력한 데이터를 귀하의 컴퓨터 브라우저 내의 로컬 스토리지(LocalStorage)에 임시 저장합니다. 이 데이터는 서버로 전송되거나 운영자가 접근할 수 없으며, 브라우저를 재방문할 때 입력 내용을 복원하기 위한 목적으로만 사용됩니다. | This app temporarily stores data entered in the 'Scoring & Structural Summary' tab in your computer's browser's local storage (LocalStorage) for your scoring convenience. This data is not transmitted to the server or accessible by the operator, and is used solely for the purpose of restoring input content when you revisit the browser. | 本アプリは、ご利用者の採点の便宜のため、「採点 & 構造一覧表」タブに入力したデータを、ご利用者のコンピュータのブラウザ内のローカルストレージ(LocalStorage)に一時保存します。このデータはサーバーに送信されたり、運営者がアクセスすることはできず、ブラウザを再訪問する際に入力内容を復元する目的でのみ使用されます。 | Esta aplicación almacena temporalmente los datos ingresados en la pestaña 'Codificación y Sumario Estructural' en el almacenamiento local (LocalStorage) del navegador de su computadora para su conveniencia de codificación. Estos datos no se transmiten al servidor ni son accesibles por el operador, y se usan únicamente para restaurar el contenido de entrada cuando vuelva a visitar el navegador. | Este aplicativo armazena temporariamente os dados inseridos na aba 'Codificação e Sumário Estrutural' no armazenamento local (LocalStorage) do navegador do seu computador para sua conveniência de codificação. Esses dados não são transmitidos ao servidor nem acessíveis pelo operador, e são usados apenas para restaurar o conteúdo de entrada quando você revisitar o navegador. |
 
-> **안내 메시지**
+> **案内メッセージ**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `list_header` | 각 채점 항목의 코드 목록과 설명입니다. | Code list and descriptions for each scoring item. | 各スコアリング項目のコード一覧と説明です。 | Lista de códigos y descripción de cada ítem de codificación. | Lista de códigos e descrição de cada item de pontuação. |
 | `loader_calc` | 계산 중... | Calculating... | 計算中... | Calculando... | Calculando... |
@@ -221,10 +221,10 @@
 | `guide_response` | [Response] 항목은 피검자의 언어 반응을 메모하는 공간이며, 계산에 영향을 주지 않으므로 비워둬도 괜찮습니다.<br>[Score]와 [G/PHR] 항목은 자동으로 계산되므로 직접 입력할 필요가 없습니다.<br>단, [Score]는 [Card]와 [Z] 유형을 선택해야 값이 자동 계산됩니다. | The [Response] section is for noting the subject's verbal responses; it does not affect calculations, so it can be left blank.<br>The [Score] and [G/PHR] sections are calculated automatically, so no manual input is needed.<br>However, for [Score], values are automatically calculated only after selecting the [Card] and [Z] types. | [Response]項目は被検者の言語反応をメモする場所であり、計算には影響しないため空欄でも構いません。<br>[Score]と[G/PHR]項目は自動的に計算されるため、直接入力する必要はありません。<br>ただし、[Score]は[Card]（図版）と[Z]（組織化）のタイプを選択しないと値が自動計算されません。 | La sección [Response] es para anotar las respuestas verbales del sujeto; no afecta a los cálculos, por lo que puede dejarse en blanco.<br>Las secciones [Score] y [G/PHR] se calculan automáticamente, por lo que no es necesario introducirlas manualmente.<br>Sin embargo, para [Score], los valores solo se calculan automáticamente después de seleccionar los tipos de [Card] (Lámina) y [Z]. | A seção [Response] serve para anotar as respostas verbais do sujeito; não afeta os cálculos, portanto pode ser deixada em branco.<br>As seções [Score] e [G/PHR] são calculados automaticamente, portanto não é necessária entrada manual.<br>No entanto, para [Score], os valores são calculados automaticamente apenas após a seleção dos tipos de [Card] (Cartão) e [Z]. |
 | `tooltip_info` | 최하단의 행에 대해서만 조작 가능하며,\n최대 50개까지 가능합니다.\n\n[Tip]\n반응 행의 순서는 결과 계산에 영향을 미치지 않습니다, 예를 들어\n8번째 행에 6번 카드에 대한 내용을 기록하였고\n14번째 행에 2번 카드에 대한 내용을 기록하여도 문제 없습니다. | Only the bottommost row can be manipulated,\nand up to 50 rows are possible.\n\n[Tip]\nThe order of response rows does not affect the calculation results. For example,\nrecording content for Card 6 in the 8th row and\nrecording content for Card 2 in the 14th row is fine. | 最下行のみ操作可能で、\n最大50個まで可能です。\n\n[Tip]\n反応行の順序は結果計算に影響しません。例えば\n8行目に6番カードの内容を記録し、\n14行目に2番カードの内容を記録しても問題ありません。 | Solo se puede manipular la fila inferior,\ny hasta 50 filas son posibles.\n\n[Tip]\nEl orden de las filas de respuesta no afecta los resultados del cálculo. Por ejemplo,\nregistrar contenido para la Lámina 6 en la fila 8 y\nregistrar contenido para la Lámina 2 en la fila 14 está bien. | Apenas a linha inferior pode ser manipulada,\ne até 50 linhas são possíveis.\n\n[Dica]\nA ordem das linhas de resposta não afeta os resultados do cálculo. Por exemplo,\nregistrar conteúdo para o Cartão 6 na linha 8 e\nregistrar conteúdo para o Cartão 2 na linha 14 está bem. |
 
-> **결과 화면 탭 및 버튼**
+> **結果画面のタブとボタン**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `tab_upper` | 상위 섹션 | Upper Section | 上位セクション | Sección Superior | Seção Superior |
 | `tab_lower` | 하위 섹션 | Lower Section | 下位セクション | Sección Inferior | Seção Inferior |
@@ -234,10 +234,10 @@
 | `btn_print` | 인쇄 | Print | 印刷 | Imprimir | Imprimir |
 | `btn_ai` | AI에게 해석 부탁하기 | Request AI Interpretation | AI解釈をリクエスト | Solicitar Interpretación de IA | Solicitar Interpretação de IA |
 
-> **Special Indices 체크박스 라벨**
+> **Special Indices のチェックボックスのラベル**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `scon_main` | 8개 이상 해당될 경우 체크 | Check if 8 or more criteria are met | 8個以上該当する場合チェック | Marcar si se cumplen 8 o más criterios | Marcar se 8 ou mais critérios forem atendidos |
 | `scon_note` | ( 주의 : 14세 이상의 수검자에게만 적용 ) | ( Note: Applies only to examinees aged 14 or older ) | ( 注意：14歳以上の受検者にのみ適用 ) | ( Nota: Se aplica solo a examinados de 14 años o más ) | ( Nota: Aplica-se apenas a examinandos com 14 anos ou mais ) |
@@ -249,10 +249,10 @@
 | `obs_r2` | (1)~(4) 중에서 2개 이상 해당 | 2 or more of (1)~(4) are met | (1)~(4)のうち2個以上該当 | 2 o más de (1)~(4) se cumplen | 2 ou mais de (1)~(4) são atendidos |
 | `obs_r3` | (1)~(5) 중에서 3개 이상 해당 | 3 or more of (1)~(5) are met | (1)~(5)のうち3個以上該当 | 3 o más de (1)~(5) se cumplen | 3 ou mais de (1)~(5) são atendidos |
 
-> **슬롯 경고 메시지**
+> **スロットの警告メッセージ**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `toast_warning_over_scoring` | 💡 과잉 채점 주의 | 💡 Over-scoring Warning | 💡 過剰採点注意 | 💡 Advertencia de Sobre-codificación | 💡 Aviso de Sobre-pontuação |
 | `toast_warning_over_scoring_msg` | 결정인이 4개 이상인 경우는 드뭅니다.\n1. 수검자가 직접 말한 내용인가요?\n2. 혹시 형태(F)를 중복 채점하지 않았나요? | Having 4 or more determinants is rare.\n1. Did the examinee actually say this?\n2. Did you accidentally score Form (F) multiple times? | 決定因が4個以上の場合は稀です。\n1. 被検者が実際に言った内容ですか？\n2. 形態(F)を重複して採点していませんか？ | Tener 4 o más determinantes es raro.\n1. ¿El examinado realmente dijo esto?\n2. ¿Codificó accidentalmente la Forma (F) múltiples veces? | Ter 4 ou mais determinantes é raro.\n1. O examinando realmente disse isso?\n2. Você pontuou acidentalmente a Forma (F) várias vezes? |
@@ -267,18 +267,18 @@
 | `toast_info_reset` | 초기화 완료 | Reset Complete | 初期化完了 | Reinicio Completo | Redefinição Completa |
 | `toast_info_reset_msg` | 모든 입력값이 초기화되었습니다. | All input values have been reset. | すべての入力値が初期化されました。 | Todos los valores de entrada han sido reiniciados. | Todos os valores de entrada foram redefinidos. |
 
-> **푸터 텍스트**
+> **フッターのテキスト**
 >
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `footer_title` | Computing Program for Rorschach Structural Summary [v1.4.0] | Computing Program for Rorschach Structural Summary [v1.4.0] | ロールシャッハ構造一覧表計算プログラム [v1.4.0] | Programa de Cálculo del Sumario Estructural de Rorschach [v1.4.0] | Programa de Cálculo do Sumário Estrutural de Rorschach [v1.4.0] |
 | `footer_copyright` | © 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved. | © 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved. | © 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved. | © 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved. | © 1997–2026 서울임상심리연구소 (Seoul Institute of Clinical Psychology, SICP). All rights reserved. |
 
-> **더보기 탭 카테고리 이름**
+> **「もっと見る」タブのカテゴリ名**
 >
 
-| 카테고리 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| カテゴリキー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `Card` | Card (카드) | Card | Card (カード) | Card (Lámina) | Card (Cartão) |
 | `Location` | Location (영역) | Location | Location (領域) | Location (Ubicación) | Location (Localização) |
@@ -291,15 +291,15 @@
 | `Z` | Z (조직화 활동) | Z (Organizational Activity) | Z (組織化活動) | Z (Actividad Organizacional) | Z (Atividade Organizacional) |
 | `Special Score` | Special Score (특수 점수) | Special Score | Special Score (特殊点数) | Special Score (Puntuación Especial) | Special Score (Pontuação Especial) |
 
-> **더보기 탭 카테고리 설명 및 개별 항목 설명**
+> **「もっと見る」タブのカテゴリの説明と個別項目の説明**
 
-더보기 탭의 카테고리 설명(10개)과 개별 항목 설명(106개)이 모두 5개 언어로 번역되었습니다.
+「もっと見る」タブのカテゴリの説明（10 件）と個別項目の説明（106 件）をすべて 5 言語に翻訳しました。
 >
-- **카테고리 설명 (10개)**
+- **カテゴリの説明（10 件）**
 
     ---
 
-    | 카테고리 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | カテゴリ | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | **Card** | 피험자에게 제시되는 로르샤흐 잉크 반점 검사의 표준화된 10장 카드를 나타내는 항목입니다. | Items representing the 10 standardized cards of the Rorschach Inkblot Test presented to the subject. | 被検者に提示されるロールシャッハ・インクブロット・テストの標準化された10枚の図版を表す項目です。 | Ítems que representan las 10 láminas estandarizadas de la prueba de manchas de tinta de Rorschach presentadas al sujeto. | Itens que representam os 10 cartões padronizados do teste de mancha de tinta de Rorschach apresentados ao sujeito. |
     | **Location** | 피험자가 잉크 반점의 어느 부분에 초점을 맞추어 반응했는지를 나타내는 채점 항목입니다. | Scoring item indicating which part of the inkblot the subject focused on for the response. | 被検者がインクブロットのどの部分に焦点を当てて反応したかを示すスコアリング項目です。 | Ítem de codificación que indica en qué parte de la mancha de tinta se centró el sujeto para la respuesta. | Item de codificação que indica em qual parte da mancha de tinta o sujeito focou para a resposta. |
@@ -312,11 +312,11 @@
     | **Z** | 피험자가 여러 개의 반점 영역을 통합하여 반응을 형성하는 인지적 노력의 정도를 나타내는 채점 항목입니다. | Scoring item indicating the degree of cognitive effort used to organize multiple blot areas into a response. | 複数のブロット領域を統合して反응を形成する際の認知的努力の程度を示すスコアリング項目です。 | Ítem de codificación que indica el grado de esfuerzo cognitivo utilizado para organizar múltiples áreas de la mancha en una respuesta. | Item de codificação que indica o grau de esforço cognitivo usado para organizar múltiplas áreas da mancha em uma resposta. |
     | **Special Score** | 비전형적이거나 병리적인 사고 과정을 나타내는 언어적, 개념적 이상 반응이 나타날 때 채점하는 항목입니다. | Item scored when verbal or conceptual deviations appear, indicating atypical or pathological thought processes. | 非定型的または病理的な思考過程を示す言語的、概念的な逸脱反応が現れた場合にスコアリングする項目です。 | Ítem codificado cuando aparecen desviaciones verbales o conceptuales que indican procesos de pensamiento atípicos o patológicos. | Item codificado quando aparecem desvios verbais ou conceituais, indicando processos de pensamento atípicos ou patológicos. |
 
-- **Card (10개 항목)**
+- **Card （10 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | I | 낯선 상황에 직면했을 때의 대처 방식과 자아상을 탐색하는 흑백 카드 | Achromatic card exploring self-image and coping styles in novel situations. | 慣れない状況に直面した際の対処様式と自己像を探索する黒白カード。 | Lámina acromática que explora la autoimagen y los estilos de afrontamiento ante situaciones nuevas. | Cartão acromático que explora a autoimagem e os estilos de enfrentamento em situações novas. |
     | II | 붉은 색채가 포함되어 공격성이나 분노 등 강렬한 정서적 자극에 대한 대처 양상을 시사 | Contains red color, suggesting coping patterns for intense emotional stimuli like aggression or anger. | 赤色が混在し、攻撃性や怒りなど強烈な情動刺激への対処様相を示唆。 | Contiene color rojo, sugiriendo patrones de afrontamiento ante estímulos emocionales intensos como agresión o ira. | Contém a cor vermelha, sugerindo padrões de enfrentamento para estímulos emocionais intensos como agressão ou raiva. |
@@ -329,11 +329,11 @@
     | IX | 색채가 혼합되고 형태가 모호하여 복잡한 정서적 상황에서의 대처와 조직화 노력을 요함 | Blended colors and vague forms require coping and organizational effort in complex emotional situations. | 色彩が混合し形態が曖昧なため、複雑な情動的状況での対処と組織化の努力を要する。 | Colores mezclados y formas vagas requieren esfuerzo de afrontamiento y organización en situaciones emocionales complejas. | Cores misturadas e formas vagas exigem esforço de enfrentamento e organização em situações emocionais complexas. |
     | X | 여러 개의 분산된 세부 영역들로 구성되어 파편화된 자극을 통합하는 능력과 시각적 조절력을 확인 | Composed of scattered details, checking visual control and the ability to integrate fragmented stimuli. | 複数の分散した細部領域で構成され、断片化された刺激を統合する能力と視覚的コントロールを確認。 | Compuesto por detalles dispersos, verifica el control visual y la capacidad de integrar estímulos fragmentados. | Composto por detalhes dispersos, verifica o controle visual e a capacidade de integrar estímulos fragmentados. |
 
-- **Location (7개 항목)**
+- **Location （7 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | W | 잉크 반점의 전체(Whole)를 모두 사용하여 반응 | Response using the entire inkblot (Whole). | インクブロットの全体(Whole)をすべて使用して反応。 | Respuesta utilizando la mancha de tinta completa (Whole). | Resposta usando toda a mancha de tinta (Whole). |
     | WS | 전체(W) 영역을 주된 자극으로 사용하며 흰 공간(S)을 배경이나 대상으로 통합 | Uses the Whole (W) area as the main stimulus, integrating white Space (S) as background or object. | 全体(W)領域を主な刺激として使用し、白い空間(S)を背景や対象として統合。 | Utiliza el área Global (W) como estímulo principal, integrando el Espacio en blanco (S) como fondo u objeto. | Utiliza a área Global (W) como estímulo principal, integrando o Espaço em branco (S) como fundo ou objeto. |
@@ -343,22 +343,22 @@
     | DdS | 드문 세부 영역(Dd)을 주된 자극으로 사용하며 흰 공간(S)을 배경이나 대상으로 통합 | Uses an Unusual Detail (Dd) as the main stimulus, integrating white Space (S). | 特殊部分領域(Dd)を主な刺激として使用し、白い空間(S)を背景や対象として統合。 | Utiliza un Detalle Inusual (Dd) como estímulo principal, integrando el Espacio en blanco (S). | Utiliza um Detalhe Incomum (Dd) como estímulo principal, integrando o Espaço em branco (S). |
     | S | 잉크가 묻은 부분이 아닌 흰 배경 공간(Space)만을 단독으로 사용하여 반응 | Response using only the white background Space, not the inked area. | インクがついた部分ではなく、白い背景空間(Space)のみを単独で使用して反応。 | Respuesta utilizando solo el Espacio en blanco de fondo, no el área entintada. | Resposta usando apenas o Espaço em branco de fondo, não a área com tinta. |
 
-- **DQ (4개 항목)**
+- **DQ （4 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | + | 두 개 이상의 대상을 의미 있게 통합하였으며 그 형태가 구체적이고 명확함 | Meaningful integration of two or more objects with specific and distinct forms. | 2つ以上の対象を有意味に統合し、その形態が具体的で明確。 | Integración significativa de dos o más objetos con formas específicas y distintas. | Integração significativa de dois ou mais objetos com formas específicas e distintas. |
     | o | 단일한 대상을 지각했거나 대상 간의 통합 없이 단순히 나열하였으며 형태가 명확함 | Perception of a single object or simple listing without integration; form is distinct. | 単一の対象を知覚したか、対象間の統合なく単に羅列しており、形態が明確。 | Percepción de un solo objeto o lista simple sin integración; la forma es clara. | Percepção de um único objeto ou lista simples sem integração; a forma é clara. |
     | v/+ | 두 개 이상의 대상을 통합하려 시도했으나 지각된 대상의 형태가 구체적이지 않고 모호함 | Attempt to integrate two or more objects, but perceived forms are vague and nonspecific. | 2つ以上の対象を統合しようと試みたが、知覚された対象の形態が具体的でなく曖昧。 | Intento de integrar dos o más objetos, pero las formas percibidas son vagas y no específicas. | Tentativa de integrar dois ou mais objetos, mas as formas percebidas são vagas e não específicas. |
     | v | 형태가 구체적이지 않고 모호한 대상(구름, 연기 등)을 지각했으며 통합하려는 노력도 없음 | Perception of vague, nonspecific objects (clouds, smoke) with no effort to integrate. | 形態が具体的でなく曖昧な対象（雲、煙など）を知覚し、統合しようとする努力もない。 | Percepción de objetos vagos y no específicos (nubes, humo) sin esfuerzo por integrar. | Percepção de objetos vagos e não específicos (nuvens, fumaça) sem esforço para integrar. |
 
-- **Determinants (24개 항목)**
+- **Determinants （24 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | F | 오직 형태(Form)만을 유일한 근거로 사용하여 반응 | Response based solely on Form. | 形態(Form)のみを唯一の根拠として使用して反応。 | Respuesta basada únicamente en la Forma. | Resposta baseada apenas na Forma. |
     | M | 인간(Human) 혹은 인간적 행위의 움직임이 지각된 반응 | Response perceiving human or human-like movement. | 人間(Human)あるいは人間的行為の運動が知覚された反応。 | Respuesta que percibe movimiento humano o similar al humano. | Resposta percebendo movimento humano ou semelhante ao humano. |
@@ -391,11 +391,11 @@
     | Fr | 반영(Reflection)이 주된 결정요인이며 형태(F)는 부수적으로 사용됨 | Reflection is primary; Form (F) is secondary. | 反射(Reflection)が主な決定因であり、形態(F)は付随的に使用される。 | Reflejo es principal; la Forma (F) es secundaria. | Reflexo é principal; a Forma (F) é secundária. |
     | rF | 반영(Reflection)이 주된 결정요인이며 형태(F)는 모호하거나 부수적인 역할을 함 | Reflection is primary; Form (F) is vague or secondary. | 反射(Reflection)が主な決定因であり、形態(F)は曖昧か付随的な役割を果たす。 | Reflejo es principal; la Forma (F) es vaga o secundaria. | Reflexo é principal; a Forma (F) é vaga ou secundária. |
 
-- **FQ (5개 항목)**
+- **FQ （5 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | + | 형태가 비범할 정도로 정교하고 구체적이며 과도하게 상세화된(Superior) 경우 | Form is extraordinarily elaborated, specific, and detailed (Superior). | 形態が非凡なほど精巧で具体的であり、過度に詳細化された(Superior)場合。 | La forma es extraordinariamente elaborada, específica y detallada (Superior). | A forma é extraordinariamente elaborada, específica e detalhada (Superior). |
     | o | 규준 집단에서 흔하게 보고되며 형태적으로 적절하고 평범한(Ordinary) 반응 | Form is appropriate and common in normative samples (Ordinary). | 基準集団で一般的に報告され、形態的に適切で平凡な(Ordinary)反応。 | La forma es apropiada y común en muestras normativas (Ordinaria). | A forma é apropriada e comum em amostras normativas (Ordinária). |
@@ -403,19 +403,19 @@
     | - | 반점의 형태적 특징과 거의 일치하지 않으며 현실을 심각하게 왜곡한(Distorted) 반응 | Distorted response that barely matches blot features and distorts reality. | ブロットの形態的特徴とほとんど一致せず、現実を深刻に歪曲した(Distorted)反応。 | Respuesta distorsionada que apenas coincide con las características de la mancha. | Resposta distorcida que mal corresponde às características da mancha. |
     | none | 형태가 전혀 포함되지 않은 반응(순수 C, 순수 T 등)에 적용 | Applied to responses containing no form (Pure C, Pure T, etc.). | 形態が全く含まれない反応（純粋C、純粋Tなど）に適用。 | Aplicado a respuestas que no contienen forma (Color Puro, Textura Pura, etc.). | Aplicado a respostas que não contêm forma (Cor Pura, Textura Pura, etc.). |
 
-- **Pair (1개 항목)**
+- **Pair （1 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | (2) | 반응 내용에 두 개의 동일한 대상이 대칭적으로 나란히 지각되었음을 의미 | Indicates perception of two identical objects perceived symmetrically. | 反応内容に2つの同一の対象が対称的に並んで知覚されたことを意味。 | Indica la percepción de dos objetos idénticos percibidos simétricamente. | Indica a percepção de dois objetos idênticos percebidos simetricamente. |
 
-- **Contents (27개 항목)**
+- **Contents （27 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | H | 현실에 존재하는 온전한 형태의 인간(Human) | Whole Human form existing in reality. | 現実に存在する完全な形態の人間(Human)。 | Forma Humana completa existente en la realidad. | Forma Humana completa existente na realidade. |
     | (H) | 유령, 거인, 요정, 악마 등 현실에 존재하지 않는 신화적/공상적 인간 형상 | Mythological/fictional human figures like ghosts, giants, fairies, demons. | 幽霊、巨人、妖精、悪魔など現実に存在しない神話的/空想的人間形象。 | Figuras humanas mitológicas/ficticias como fantasmas, gigantes, hadas, demonios. | Figuras humanas mitológicas/fictícias como fantasmas, gigantes, fadas, demônios. |
@@ -445,30 +445,30 @@
     | Sx | 성 기관, 성행위, 속옷 등 성(Sex)과 관련된 내용 | Sex-related content like organs, intercourse, lingerie. | 性器官、性行為、下着など性(Sex)と関連した内容。 | Contenido Sexual como órganos, actos, lencería. | Conteúdo Sexual como órgãos, atos, lingerie. |
     | Xy | 엑스레이, MRI, 골격 사진(X-ray) 등 | X-ray, MRI, skeletal images. | レントゲン、MRI、骨格写真(X-ray)など。 | Rayos X, resonancias magnéticas, imágenes esqueléticas. | Raio X, ressonância magnética, imagens esqueléticas. |
 
-- **Popular (1개 항목)**
+- **Popular （1 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | P | 해당 반점 영역에서 규준 집단의 1/3 이상이 보고하는 문화적으로 매우 흔한 평범 반응 | Popular response reported by 1/3+ of the normative group for that blot area. | 当該ブロット領域で基準集団の1/3以上が報告する文化的に非常にありふれた平凡反応。 | Respuesta Popular reportada por 1/3+ del grupo normativo en esa área. | Resposta Popular relatada por 1/3+ do grupo normativo naquela área. |
 
-- **Z (4개 항목)**
+- **Z （4 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | ZW | 반점 전체(W)를 사용하면서 발달질이 양호(+, o, v/+)하여 조직화 점수가 부여되는 경우 | Z score given for Whole (W) usage with good developmental quality (+, o, v/+). | ブロット全体(W)を使用しながら発達質が良好(+, o, v/+)で組織化スコアが付与される場合。 | Puntuación Z por uso Global (W) con buena calidad evolutiva (+, o, v/+). | Pontuação Z para uso Global (W) com boa qualidade evolutiva (+, o, v/+). |
     | ZA | 서로 인접한(Adjacent) 두 개 이상의 영역을 의미 있게 통합하여 반응을 형성 | Meaningful integration of two or more Adjacent areas. | 互いに隣接(Adjacent)した2つ以上の領域を有意味に統合して反応を形成。 | Integración significativa de dos o más áreas Adyacentes. | Integração significativa de duas ou mais áreas Adjacentes. |
     | ZD | 서로 인접하지 않고 떨어져 있는(Distant) 두 개 이상의 영역을 의미 있게 통합 | Meaningful integration of two or more Distant (non-adjacent) areas. | 互いに隣接せず離れている(Distant)2つ以上の領域を有意味に統合。 | Integración significativa de dos o más áreas Distantes (no adyacentes). | Integração significativa de duas ou mais áreas Distantes (não adjacentes). |
     | ZS | 흰 공간(S)을 다른 영역과 의미 있게 통합(Space)하여 반응을 형성 | Meaningful integration of white Space (S) with other areas. | 白い空間(S)を他の領域と有意味に統合(Space)して反応を形成。 | Integración significativa del Espacio en blanco (S) con otras áreas. | Integração significativa do Espaço em branco (S) com outras áreas. |
 
-- **Special Score (27개 항목)**
+- **Special Score （27 項目）**
 
     ---
 
-    | 항목 코드 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+    | 項目コード | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
     | --- | --- | --- | --- | --- | --- |
     | DV1 | 부적절하거나 독특한 단어를 사용했으나 의미 전달은 가능한 경미한 언어 일탈 | Mild verbal slippage using inappropriate words but meaning is clear (Deviant Verbalization). | 不適切または独特な単語を使用したが意味伝達は可能な軽微な言語逸脱。 | Desliz verbal leve usando palabras inapropiadas, pero el significado es claro. | Deslize verbal leve usando palavras inadequadas, mas o significado é claro. |
     | DV2 | 의미를 알 수 없는 신조어를 쓰거나 심각하게 부적절한 단어를 사용한 심각한 언어 일탈 | Severe verbal slippage using neologisms or grossly inappropriate words. | 意味不明な造語を使ったり深刻に不適切な単語を使用した深刻な言語逸脱。 | Desliz verbal severo usando neologismos o palabras gravemente inapropiadas. | Deslize verbal severo usando neologismos ou palavras grosseiramente inadequadas. |
@@ -491,42 +491,42 @@
     | PSV | 이전의 반응 내용을 부적절하게 반복하거나 같은 위치/단어를 기계적으로 반복(Perseveration) | Inappropriate repetition of previous content or mechanical repetition (Perseveration). | 以前の反応内容を不適切に繰り返したり、同じ位置/単語を機械的に反復(Perseveration)。 | Repetición inapropiada de contenido previo o repetición mecánica. | Repetição inadequada de conteúdo anterior ou repetição mecânica. |
 
 
-> **Title 속성**
+> **Title 属性**
 >
-- **언어 선택 버튼**: 지구본 아이콘 버튼과 각 언어 버튼의 `title` 속성
-- **CSV 내보내기 버튼**: "Raw Data", "Summary" 버튼의 `title` 속성
-- **슬롯 제어 버튼**: 채점 영역의 "+", "-" 버튼의 `title` 속성
+- **言語選択ボタン**: 地球儀アイコンのボタンと各言語ボタンの `title` 属性
+- **CSV 書き出しボタン**: "Raw Data"、"Summary" ボタンの `title` 属性
+- **スロット制御ボタン**: 採点領域の "+"、"-" ボタンの `title` 属性
 
-| 번역 키 | 한국어 (ko) | 영어 (en) | 일본어 (ja) | 스페인어 (es) | 포르투갈어 (pt) |
+| 翻訳キー | 韓国語 (ko) | 英語 (en) | 日本語 (ja) | スペイン語 (es) | ポルトガル語 (pt) |
 | --- | --- | --- | --- | --- | --- |
 | `title_select_language` | 언어 선택 | Select Language | 言語を選択 | Seleccionar Idioma | Selecionar Idioma |
-- `title_lang_ko`, `title_lang_en`, `title_lang_ja`, `title_lang_es`, `title_lang_pt`: 각 언어 버튼의 title
-- `title_export_rawdata`: CSV 내보내기(Raw Data) 버튼의 title
-- `title_export_summary`: CSV 내보내기(Summary) 버튼의 title
-- `title_add_slot`: 슬롯 추가 버튼의 title
-- `title_delete_slot`: 슬롯 삭제 버튼의 title
+- `title_lang_ko`、`title_lang_en`、`title_lang_ja`、`title_lang_es`、`title_lang_pt`: 各言語ボタンの title
+- `title_export_rawdata`: CSV 書き出し（Raw Data）ボタンの title
+- `title_export_summary`: CSV 書き出し（Summary）ボタンの title
+- `title_add_slot`: スロット追加ボタンの title
+- `title_delete_slot`: スロット削除ボタンの title
 
-### *더보기 탭 스타일 개선*
+### *「もっと見る」タブのスタイル改善*
 
-더보기 탭의 긴 텍스트가 표를 넘어가는 문제를 해결하기 위해 다음과 같이 수정되었습니다
+「もっと見る」タブの長いテキストが表からはみ出す問題を解決するため、次のように修正しました
 
-- **줄바꿈 제거**: `word-wrap`, `word-break`, `overflow-wrap` 속성 제거, `white-space: nowrap` 적용
-- **헤더 넓이 조정**: `table-layout: fixed` 제거, 테이블에 `min-width: 800px` 설정
-- **횡스크롤 활성화**: `.table-wrapper:has(#list-table-body)`에 `overflow-x: auto` 추가
-- **설명 셀**: `white-space: normal`로 유지하여 긴 설명은 줄바꿈 가능
+- **改行の除去**: `word-wrap`、`word-break`、`overflow-wrap` 属性を削除し、`white-space: nowrap` を適用
+- **ヘッダー幅の調整**: `table-layout: fixed` を削除し、表に `min-width: 800px` を設定
+- **横スクロールの有効化**: `.table-wrapper:has(#list-table-body)` に `overflow-x: auto` を追加
+- **説明セル**: `white-space: normal` を維持し、長い説明は改行可能
 
-### *코드 품질 개선*
+### *コード品質の改善*
 
-불필요한 인라인 주석을 제거하고, 목차 및 주석의 정합성을 개선하였습니다.
+不要なインラインコメントを削除し、目次とコメントの整合性を改善しました。
 
-- 인라인 주석 정리
-- 목차 및 주석 정합성
+- インラインコメントの整理
+- 目次とコメントの整合性
 
 ---
 
-# 향후 로드맵
+# 今後のロードマップ
 
-다음 번 메이저 패치에서 배너 광고 삽입을 고려 중에 있습니다.
+次のメジャーリリースでバナー広告の挿入を検討しています。
 
 ## Source files
 
@@ -536,5 +536,5 @@
 
 ## How to use
 
-이 버전의 코드를 재현하려면 `source/` 안의 파일을 Google Apps Script 프로젝트에 같은 파일명으로 만든 뒤 그대로 붙여넣습니다.
-GAS 프로젝트에서 웹앱으로 배포하면 해당 버전의 계산기를 직접 실행할 수 있습니다.
+このバージョンのコードを再現するには、`source/` 内のファイルを Google Apps Script プロジェクトに同じファイル名で作成し、そのまま貼り付けます。
+GAS プロジェクトをウェブアプリとしてデプロイすると、そのバージョンの計算機を直接実行できます。
