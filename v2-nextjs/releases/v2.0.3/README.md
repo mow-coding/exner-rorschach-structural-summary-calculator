@@ -1,5 +1,7 @@
 # [2026-06-11] v2.0.3 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.0.3은 참조 문서 화면이 늦게 열리던 문제와 AI 연결 오류를 수정한 버그 패치입니다. 화면 구성, 사용 방식과 AI 답변 범위는 바뀌지 않았으며 참조 문서 화면은 더 빠르게 열리고 잘못된 AI 연결 정보는 안전하게 처리됩니다.
 
 ## 핵심 요약

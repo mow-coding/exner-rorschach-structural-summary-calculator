@@ -1,3 +1,5 @@
 # [2026-07-05] v2.1.7 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.1.7에서는 사용자 기능을 변경하지 않았습니다. 앱 화면, 구조요약 계산식과 AI 답변 방식은 그대로 유지되며 기존 결과를 다시 계산할 필요가 없습니다.

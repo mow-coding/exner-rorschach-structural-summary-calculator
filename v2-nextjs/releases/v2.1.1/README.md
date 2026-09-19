@@ -1,5 +1,7 @@
 # [2026-06-27] v2.1.1 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.1.1은 채점 입력 화면과 AI 연결 과정의 문제를 수정한 버그 패치입니다. Gemini/Google AI 연결을 제거하고, 본인의 API 키를 연결하는 OpenAI 방식으로 단순화했습니다.
 
 ## 핵심 요약

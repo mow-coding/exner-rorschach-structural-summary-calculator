@@ -1,5 +1,7 @@
 # [2026-07-17] v2.2.3 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 ## 먼저 확인하실 점
 
 v2.2.3은 **구조요약 계산식과 화면 배치를 바꾸지 않은** 검색·공유 표시와 AI 응답 평가 개선 패치입니다. 기존 구조요약 결과를 다시 계산할 필요가 없고, 계산기 입력 항목이나 AI 사용 여부도 달라지지 않습니다.

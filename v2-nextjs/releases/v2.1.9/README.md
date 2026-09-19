@@ -1,5 +1,7 @@
 # [2026-07-12] v2.1.9 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 ## 먼저 확인하실 점
 
 v2.1.9는 코딩 도우미와 해석 도우미가 답변 전에 질문에 맞는 참조 문서를 더 안정적으로 찾도록 검색 방식을 개선한 패치입니다.

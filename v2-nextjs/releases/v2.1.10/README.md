@@ -1,5 +1,7 @@
 # [2026-07-13] v2.1.10 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 ## 먼저 확인하실 점
 
 v2.1.10은 v2.1.9 이후에도 남아 있던 참조 문서 검색 문제를 수정한 패치입니다.

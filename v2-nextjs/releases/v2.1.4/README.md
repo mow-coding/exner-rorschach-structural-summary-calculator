@@ -1,5 +1,7 @@
 # [2026-07-02] v2.1.4 버그 패치
 
+[한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
+
 v2.1.4에서는 앱 화면과 구조요약 계산식을 변경하지 않았습니다. 코딩 도우미와 해석 도우미는 이어지는 대화에서도 임상가의 최종 판단을 대신하지 않습니다.
 
 사용 방법이나 기존 계산 결과에는 영향이 없습니다.
