@@ -1,0 +1,1311 @@
+{
+  "format": 1,
+  "suite": "jev-gpt-paired-synthetic-holdout",
+  "sourceJournalsSha256": [
+    "6497b6977d49dd974c26bf4800ac0763cfe5db47f4d38b3a1ebb9a29c6f4747c",
+    "47a45a1f4e76f0b536121fda8c49a451b4410d2d01f797d7ddecc1a39bace678"
+  ],
+  "scoring": "2026-09-23 updated phrase coverage; automatic contract, not clinical accuracy",
+  "arms": {
+    "baseline:gpt-6-sol": {
+      "completed": 20,
+      "automaticContractPassed": 15,
+      "gptCostUsd": 0.21695669999999995,
+      "gptLatencyMeanMs": 4128,
+      "totalInputTokens": 96552,
+      "totalOutputTokens": 4086
+    },
+    "baseline:gpt-6-luna": {
+      "completed": 20,
+      "automaticContractPassed": 17,
+      "gptCostUsd": 0.011021334999999997,
+      "gptLatencyMeanMs": 4443,
+      "totalInputTokens": 96552,
+      "totalOutputTokens": 4433
+    },
+    "hybrid:gpt-6-sol": {
+      "completed": 20,
+      "automaticContractPassed": 19,
+      "gptCostUsd": 0.2866825,
+      "gptLatencyMeanMs": 3906,
+      "totalInputTokens": 99833,
+      "totalOutputTokens": 3713
+    },
+    "hybrid:gpt-6-luna": {
+      "completed": 20,
+      "automaticContractPassed": 19,
+      "gptCostUsd": 0.014878124999999997,
+      "gptLatencyMeanMs": 4619,
+      "totalInputTokens": 99833,
+      "totalOutputTokens": 4801
+    }
+  },
+  "jev": {
+    "completed": 20,
+    "gatewayBilledUsd": 0,
+    "directListEstimateUsd": 0.0026161800000000005,
+    "latencyMeanMs": 643
+  },
+  "attemptedCalls": 100,
+  "knownGptCostUsd": 0.5295386599999999,
+  "unknownFailureUpperUsd": 0,
+  "invalidAnswers": 1,
+  "recoveredByValidatorCorrection": 1,
+  "failures": [
+    {
+      "fixtureId": "coding-ko-special-score-level-pair-boundary",
+      "arm": "jev",
+      "model": null,
+      "httpStatus": null,
+      "code": null,
+      "reason": "JEV_ANSWER_INVALID",
+      "unknownUpperUsd": 0,
+      "resolvedByValidatorCorrection": true
+    }
+  ],
+  "rows": [
+    {
+      "fixtureId": "coding-ko-cn-calculation-boundaries",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal",
+        "missing_required_signal"
+      ],
+      "costUsd": 0.010731,
+      "latencyMs": 5100,
+      "inputTokens": 3253,
+      "outputTokens": 260
+    },
+    {
+      "fixtureId": "coding-ko-cn-calculation-boundaries",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00058305,
+      "latencyMs": 5829,
+      "inputTokens": 3253,
+      "outputTokens": 353
+    },
+    {
+      "fixtureId": "coding-ko-cn-calculation-boundaries",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0114435,
+      "latencyMs": 4896,
+      "inputTokens": 3410,
+      "outputTokens": 292
+    },
+    {
+      "fixtureId": "coding-ko-cn-calculation-boundaries",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005971749999999999,
+      "latencyMs": 5246,
+      "inputTokens": 3410,
+      "outputTokens": 342
+    },
+    {
+      "fixtureId": "coding-en-cn-lower-ratio-boundary",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.0112385,
+      "latencyMs": 4710,
+      "inputTokens": 3436,
+      "outputTokens": 265
+    },
+    {
+      "fixtureId": "coding-en-cn-lower-ratio-boundary",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000556925,
+      "latencyMs": 4321,
+      "inputTokens": 3436,
+      "outputTokens": 255
+    },
+    {
+      "fixtureId": "coding-en-cn-lower-ratio-boundary",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.011306,
+      "latencyMs": 3962,
+      "inputTokens": 3591,
+      "outputTokens": 233
+    },
+    {
+      "fixtureId": "coding-en-cn-lower-ratio-boundary",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005868,
+      "latencyMs": 4623,
+      "inputTokens": 3591,
+      "outputTokens": 276
+    },
+    {
+      "fixtureId": "coding-ja-cn-calculation-boundaries",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0102135,
+      "latencyMs": 4174,
+      "inputTokens": 2930,
+      "outputTokens": 289
+    },
+    {
+      "fixtureId": "coding-ja-cn-calculation-boundaries",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.000510675,
+      "latencyMs": 4338,
+      "inputTokens": 2930,
+      "outputTokens": 289
+    },
+    {
+      "fixtureId": "coding-ja-cn-calculation-boundaries",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.010466,
+      "latencyMs": 4451,
+      "inputTokens": 3087,
+      "outputTokens": 275
+    },
+    {
+      "fixtureId": "coding-ja-cn-calculation-boundaries",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005838,
+      "latencyMs": 6546,
+      "inputTokens": 3087,
+      "outputTokens": 396
+    },
+    {
+      "fixtureId": "coding-es-cn-calculation-boundaries",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0108135,
+      "latencyMs": 4677,
+      "inputTokens": 3282,
+      "outputTokens": 261
+    },
+    {
+      "fixtureId": "coding-es-cn-calculation-boundaries",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000570675,
+      "latencyMs": 5343,
+      "inputTokens": 3282,
+      "outputTokens": 321
+    },
+    {
+      "fixtureId": "coding-es-cn-calculation-boundaries",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.011531,
+      "latencyMs": 5034,
+      "inputTokens": 3437,
+      "outputTokens": 294
+    },
+    {
+      "fixtureId": "coding-es-cn-calculation-boundaries",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00060555,
+      "latencyMs": 6917,
+      "inputTokens": 3437,
+      "outputTokens": 352
+    },
+    {
+      "fixtureId": "coding-pt-cn-calculation-boundaries",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.0123735,
+      "latencyMs": 5216,
+      "inputTokens": 3754,
+      "outputTokens": 299
+    },
+    {
+      "fixtureId": "coding-pt-cn-calculation-boundaries",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000658675,
+      "latencyMs": 6992,
+      "inputTokens": 3754,
+      "outputTokens": 379
+    },
+    {
+      "fixtureId": "coding-pt-cn-calculation-boundaries",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.012921,
+      "latencyMs": 4437,
+      "inputTokens": 3909,
+      "outputTokens": 315
+    },
+    {
+      "fixtureId": "coding-pt-cn-calculation-boundaries",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0006895499999999999,
+      "latencyMs": 6981,
+      "inputTokens": 3909,
+      "outputTokens": 402
+    },
+    {
+      "fixtureId": "coding-ko-special-score-level-pair-boundary",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.005197899999999999,
+      "latencyMs": 3693,
+      "inputTokens": 3413,
+      "outputTokens": 149
+    },
+    {
+      "fixtureId": "coding-ko-special-score-level-pair-boundary",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.000272895,
+      "latencyMs": 3822,
+      "inputTokens": 3413,
+      "outputTokens": 175
+    },
+    {
+      "fixtureId": "coding-en-special-score-level-pair-boundary",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.005810399999999999,
+      "latencyMs": 3287,
+      "inputTokens": 4002,
+      "outputTokens": 63
+    },
+    {
+      "fixtureId": "coding-en-special-score-level-pair-boundary",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00031502,
+      "latencyMs": 2583,
+      "inputTokens": 4002,
+      "outputTokens": 112
+    },
+    {
+      "fixtureId": "coding-en-special-score-level-pair-boundary",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.010996,
+      "latencyMs": 2770,
+      "inputTokens": 4159,
+      "outputTokens": 60
+    },
+    {
+      "fixtureId": "coding-en-special-score-level-pair-boundary",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005778,
+      "latencyMs": 2477,
+      "inputTokens": 4159,
+      "outputTokens": 116
+    },
+    {
+      "fixtureId": "coding-ja-special-score-level-pair-boundary",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.0071278999999999995,
+      "latencyMs": 2471,
+      "inputTokens": 4277,
+      "outputTokens": 126
+    },
+    {
+      "fixtureId": "coding-ja-special-score-level-pair-boundary",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000350895,
+      "latencyMs": 2947,
+      "inputTokens": 4277,
+      "outputTokens": 115
+    },
+    {
+      "fixtureId": "coding-ja-special-score-level-pair-boundary",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0121385,
+      "latencyMs": 2661,
+      "inputTokens": 4432,
+      "outputTokens": 106
+    },
+    {
+      "fixtureId": "coding-ja-special-score-level-pair-boundary",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0006109249999999999,
+      "latencyMs": 3719,
+      "inputTokens": 4432,
+      "outputTokens": 114
+    },
+    {
+      "fixtureId": "coding-es-special-score-level-pair-boundary",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0050954,
+      "latencyMs": 2881,
+      "inputTokens": 3508,
+      "outputTokens": 115
+    },
+    {
+      "fixtureId": "coding-es-special-score-level-pair-boundary",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.00026576999999999997,
+      "latencyMs": 4150,
+      "inputTokens": 3508,
+      "outputTokens": 137
+    },
+    {
+      "fixtureId": "coding-es-special-score-level-pair-boundary",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.010276,
+      "latencyMs": 3511,
+      "inputTokens": 3663,
+      "outputTokens": 112
+    },
+    {
+      "fixtureId": "coding-es-special-score-level-pair-boundary",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005128,
+      "latencyMs": 2333,
+      "inputTokens": 3663,
+      "outputTokens": 110
+    },
+    {
+      "fixtureId": "coding-pt-special-score-level-pair-boundary",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0049778999999999995,
+      "latencyMs": 2239,
+      "inputTokens": 3661,
+      "outputTokens": 65
+    },
+    {
+      "fixtureId": "coding-pt-special-score-level-pair-boundary",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00028689499999999996,
+      "latencyMs": 5582,
+      "inputTokens": 3661,
+      "outputTokens": 141
+    },
+    {
+      "fixtureId": "coding-pt-special-score-level-pair-boundary",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0107935,
+      "latencyMs": 2670,
+      "inputTokens": 3818,
+      "outputTokens": 125
+    },
+    {
+      "fixtureId": "coding-pt-special-score-level-pair-boundary",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005456749999999999,
+      "latencyMs": 3045,
+      "inputTokens": 3818,
+      "outputTokens": 137
+    },
+    {
+      "fixtureId": "interpretation-ko-ghr-phr-ratio-boundary",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0132585,
+      "latencyMs": 6512,
+      "inputTokens": 3928,
+      "outputTokens": 344
+    },
+    {
+      "fixtureId": "interpretation-ko-ghr-phr-ratio-boundary",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0006044249999999999,
+      "latencyMs": 3726,
+      "inputTokens": 3928,
+      "outputTokens": 227
+    },
+    {
+      "fixtureId": "interpretation-ko-ghr-phr-ratio-boundary",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.012196,
+      "latencyMs": 4138,
+      "inputTokens": 4091,
+      "outputTokens": 197
+    },
+    {
+      "fixtureId": "interpretation-ko-ghr-phr-ratio-boundary",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0006268,
+      "latencyMs": 4167,
+      "inputTokens": 4091,
+      "outputTokens": 231
+    },
+    {
+      "fixtureId": "interpretation-en-ghr-phr-ratio-boundary",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.010721,
+      "latencyMs": 3434,
+      "inputTokens": 3533,
+      "outputTokens": 189
+    },
+    {
+      "fixtureId": "interpretation-en-ghr-phr-ratio-boundary",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00055005,
+      "latencyMs": 4219,
+      "inputTokens": 3533,
+      "outputTokens": 217
+    },
+    {
+      "fixtureId": "interpretation-en-ghr-phr-ratio-boundary",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0100635,
+      "latencyMs": 2575,
+      "inputTokens": 3690,
+      "outputTokens": 84
+    },
+    {
+      "fixtureId": "interpretation-en-ghr-phr-ratio-boundary",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000543675,
+      "latencyMs": 3088,
+      "inputTokens": 3690,
+      "outputTokens": 165
+    },
+    {
+      "fixtureId": "interpretation-ja-ghr-phr-ratio-boundary",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.013651,
+      "latencyMs": 6188,
+      "inputTokens": 3721,
+      "outputTokens": 435
+    },
+    {
+      "fixtureId": "interpretation-ja-ghr-phr-ratio-boundary",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00058555,
+      "latencyMs": 3921,
+      "inputTokens": 3721,
+      "outputTokens": 241
+    },
+    {
+      "fixtureId": "interpretation-ja-ghr-phr-ratio-boundary",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0121385,
+      "latencyMs": 4785,
+      "inputTokens": 3884,
+      "outputTokens": 243
+    },
+    {
+      "fixtureId": "interpretation-ja-ghr-phr-ratio-boundary",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0006029249999999999,
+      "latencyMs": 4044,
+      "inputTokens": 3884,
+      "outputTokens": 235
+    },
+    {
+      "fixtureId": "interpretation-es-ghr-phr-ratio-boundary",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.010526,
+      "latencyMs": 3930,
+      "inputTokens": 3495,
+      "outputTokens": 179
+    },
+    {
+      "fixtureId": "interpretation-es-ghr-phr-ratio-boundary",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005472999999999999,
+      "latencyMs": 4943,
+      "inputTokens": 3495,
+      "outputTokens": 221
+    },
+    {
+      "fixtureId": "interpretation-es-ghr-phr-ratio-boundary",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0110035,
+      "latencyMs": 3944,
+      "inputTokens": 3658,
+      "outputTokens": 186
+    },
+    {
+      "fixtureId": "interpretation-es-ghr-phr-ratio-boundary",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000547175,
+      "latencyMs": 3336,
+      "inputTokens": 3658,
+      "outputTokens": 180
+    },
+    {
+      "fixtureId": "interpretation-pt-ghr-phr-ratio-boundary",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0037889,
+      "latencyMs": 3694,
+      "inputTokens": 3568,
+      "outputTokens": 166
+    },
+    {
+      "fixtureId": "interpretation-pt-ghr-phr-ratio-boundary",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000211945,
+      "latencyMs": 4061,
+      "inputTokens": 3568,
+      "outputTokens": 211
+    },
+    {
+      "fixtureId": "interpretation-pt-ghr-phr-ratio-boundary",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.011411,
+      "latencyMs": 3874,
+      "inputTokens": 3725,
+      "outputTokens": 210
+    },
+    {
+      "fixtureId": "interpretation-pt-ghr-phr-ratio-boundary",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0005840499999999999,
+      "latencyMs": 5386,
+      "inputTokens": 3725,
+      "outputTokens": 237
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-mixed-system",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.015916200000000002,
+      "latencyMs": 3433,
+      "inputTokens": 8615,
+      "outputTokens": 157
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-mixed-system",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0008518099999999999,
+      "latencyMs": 4653,
+      "inputTokens": 8615,
+      "outputTokens": 269
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-mixed-system",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023871,
+      "latencyMs": 3997,
+      "inputTokens": 8793,
+      "outputTokens": 189
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-mixed-system",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00121755,
+      "latencyMs": 4288,
+      "inputTokens": 8793,
+      "outputTokens": 237
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-mixed-system",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0164789,
+      "latencyMs": 3440,
+      "inputTokens": 8704,
+      "outputTokens": 151
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-mixed-system",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000934445,
+      "latencyMs": 7331,
+      "inputTokens": 8704,
+      "outputTokens": 372
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-mixed-system",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023881,
+      "latencyMs": 3731,
+      "inputTokens": 8881,
+      "outputTokens": 168
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-mixed-system",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00119855,
+      "latencyMs": 8652,
+      "inputTokens": 8881,
+      "outputTokens": 177
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-mixed-system",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0161014,
+      "latencyMs": 4167,
+      "inputTokens": 8449,
+      "outputTokens": 177
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-mixed-system",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00078257,
+      "latencyMs": 3156,
+      "inputTokens": 8449,
+      "outputTokens": 132
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-mixed-system",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023336,
+      "latencyMs": 3875,
+      "inputTokens": 8627,
+      "outputTokens": 177
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-mixed-system",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012397999999999999,
+      "latencyMs": 4511,
+      "inputTokens": 8627,
+      "outputTokens": 323
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-mixed-system",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.016466400000000003,
+      "latencyMs": 5485,
+      "inputTokens": 8355,
+      "outputTokens": 237
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-mixed-system",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0007788200000000001,
+      "latencyMs": 4087,
+      "inputTokens": 8355,
+      "outputTokens": 148
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-mixed-system",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023071,
+      "latencyMs": 3451,
+      "inputTokens": 8533,
+      "outputTokens": 174
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-mixed-system",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00122105,
+      "latencyMs": 4953,
+      "inputTokens": 8533,
+      "outputTokens": 309
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-mixed-system",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0164689,
+      "latencyMs": 3831,
+      "inputTokens": 8668,
+      "outputTokens": 159
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-mixed-system",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000802945,
+      "latencyMs": 2859,
+      "inputTokens": 8668,
+      "outputTokens": 118
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-mixed-system",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023326,
+      "latencyMs": 5733,
+      "inputTokens": 8847,
+      "outputTokens": 121
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-mixed-system",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012308,
+      "latencyMs": 4204,
+      "inputTokens": 8847,
+      "outputTokens": 250
+    },
+    {
+      "fixtureId": "coding-ko-special-score-level-pair-boundary",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.0105135,
+      "latencyMs": 3621,
+      "inputTokens": 3598,
+      "outputTokens": 152
+    },
+    {
+      "fixtureId": "coding-ko-special-score-level-pair-boundary",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.0005556749999999999,
+      "latencyMs": 3855,
+      "inputTokens": 3598,
+      "outputTokens": 212
+    }
+  ],
+  "jevRows": [
+    {
+      "fixtureId": "coding-ko-cn-calculation-boundaries",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000082488,
+      "billedCostUsd": 0,
+      "latencyMs": 812,
+      "inputTokens": 1964,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-en-cn-lower-ratio-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000087528,
+      "billedCostUsd": 0,
+      "latencyMs": 588,
+      "inputTokens": 2084,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-ja-cn-calculation-boundaries",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000067032,
+      "billedCostUsd": 0,
+      "latencyMs": 593,
+      "inputTokens": 1596,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-es-cn-calculation-boundaries",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00008295,
+      "billedCostUsd": 0,
+      "latencyMs": 755,
+      "inputTokens": 1975,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-pt-cn-calculation-boundaries",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000104832,
+      "billedCostUsd": 0,
+      "latencyMs": 789,
+      "inputTokens": 2496,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-en-special-score-level-pair-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000111132,
+      "billedCostUsd": 0,
+      "latencyMs": 611,
+      "inputTokens": 2646,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-ja-special-score-level-pair-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00013230000000000002,
+      "billedCostUsd": 0,
+      "latencyMs": 648,
+      "inputTokens": 3150,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-es-special-score-level-pair-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00009345000000000001,
+      "billedCostUsd": 0,
+      "latencyMs": 456,
+      "inputTokens": 2225,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-pt-special-score-level-pair-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000100506,
+      "billedCostUsd": 0,
+      "latencyMs": 623,
+      "inputTokens": 2393,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "interpretation-ko-ghr-phr-ratio-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000064806,
+      "billedCostUsd": 0,
+      "latencyMs": 696,
+      "inputTokens": 1543,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r2"
+      }
+    },
+    {
+      "fixtureId": "interpretation-en-ghr-phr-ratio-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000054054,
+      "billedCostUsd": 0,
+      "latencyMs": 613,
+      "inputTokens": 1287,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "interpretation-ja-ghr-phr-ratio-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000063042,
+      "billedCostUsd": 0,
+      "latencyMs": 492,
+      "inputTokens": 1501,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r2"
+      }
+    },
+    {
+      "fixtureId": "interpretation-es-ghr-phr-ratio-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00005262600000000001,
+      "billedCostUsd": 0,
+      "latencyMs": 577,
+      "inputTokens": 1253,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "interpretation-pt-ghr-phr-ratio-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000057036,
+      "billedCostUsd": 0,
+      "latencyMs": 648,
+      "inputTokens": 1358,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-mixed-system",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00027115200000000004,
+      "billedCostUsd": 0,
+      "latencyMs": 708,
+      "inputTokens": 6456,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "missing_rule",
+        "reference": "none"
+      }
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-mixed-system",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.0002814,
+      "billedCostUsd": 0,
+      "latencyMs": 592,
+      "inputTokens": 6700,
+      "choices": {
+        "scope": "external_or_unsafe",
+        "sufficiency": "missing_rule",
+        "reference": "none"
+      }
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-mixed-system",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00027258,
+      "billedCostUsd": 0,
+      "latencyMs": 741,
+      "inputTokens": 6490,
+      "choices": {
+        "scope": "external_or_unsafe",
+        "sufficiency": "missing_rule",
+        "reference": "r2"
+      }
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-mixed-system",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000265944,
+      "billedCostUsd": 0,
+      "latencyMs": 630,
+      "inputTokens": 6332,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "missing_rule",
+        "reference": "none"
+      }
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-mixed-system",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000280728,
+      "billedCostUsd": 0,
+      "latencyMs": 666,
+      "inputTokens": 6684,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "missing_rule",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-ko-special-score-level-pair-boundary",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00009059400000000001,
+      "billedCostUsd": 0,
+      "latencyMs": 630,
+      "inputTokens": 2157,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r3"
+      }
+    }
+  ]
+}

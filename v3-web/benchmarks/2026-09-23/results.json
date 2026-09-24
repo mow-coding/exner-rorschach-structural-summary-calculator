@@ -1,0 +1,329 @@
+{
+  "checkedAt": "2026-09-23T11:54:51.727Z",
+  "models": {
+    "gpt-5.6-terra": {
+      "fixtureCount": 260,
+      "modelCalls": 290,
+      "completedCalls": 290,
+      "costUsd": 3.553828,
+      "inputTokens": 1421744,
+      "cachedInputTokens": 0,
+      "outputTokens": 59195,
+      "promptVersion": "mow-mobile-v2",
+      "corpusHash": "802d6eb3f364b0bb6c33ce8ff9178e888824c669d56ecad8ce21760384467005",
+      "manifestHashes": [
+        "074a00967d910b0817860eab157ce240f6880e392c65e12cb648bdbc0c628c25",
+        "41192da89b13ee3b385a41a619a23e6c668cf99ff650dcc7f271fffc064fe34d",
+        "9d14ac11b8079ca725910e6997bf9424d977afb8dd3ac33a158786959294545b",
+        "4e1d2a317e99b72a93a1a406dafd0edc0e38a4b423af59e561827a8d78114033",
+        "6a3a322eae354478437086d167d978fec08ae87255a5d2169d51c92faf356227",
+        "ada713fe7109fc5d345a7d12287d2ffe0442f76594f3e21a25ebb214d0f17550",
+        "c969cb51d53c1aa663b0557483a7c6e2fd8de8cd0b2f0c79588943c5d7e27fa0"
+      ],
+      "providerModelsVerified": true,
+      "contractPassed": 250,
+      "contractTotal": 280,
+      "latencyMedianMs": 3061,
+      "latencyP95Ms": 10469,
+      "byLocale": {
+        "ko": {
+          "fixtures": 61,
+          "calls": 66,
+          "contractPassed": 54,
+          "contractTotal": 64,
+          "costUsd": 0.839546
+        },
+        "en": {
+          "fixtures": 64,
+          "calls": 74,
+          "contractPassed": 65,
+          "contractTotal": 72,
+          "costUsd": 0.88809
+        },
+        "es": {
+          "fixtures": 44,
+          "calls": 49,
+          "contractPassed": 45,
+          "contractTotal": 47,
+          "costUsd": 0.574148
+        },
+        "pt": {
+          "fixtures": 44,
+          "calls": 49,
+          "contractPassed": 43,
+          "contractTotal": 47,
+          "costUsd": 0.595944
+        },
+        "ja": {
+          "fixtures": 47,
+          "calls": 52,
+          "contractPassed": 43,
+          "contractTotal": 50,
+          "costUsd": 0.6561
+        }
+      },
+      "byWorkflow": {
+        "coding_assist": {
+          "fixtures": 143,
+          "calls": 157,
+          "contractPassed": 132,
+          "contractTotal": 152,
+          "costUsd": 1.296702
+        },
+        "interpretation": {
+          "fixtures": 117,
+          "calls": 133,
+          "contractPassed": 118,
+          "contractTotal": 128,
+          "costUsd": 2.257126
+        }
+      },
+      "byCategory": {
+        "normal": {
+          "fixtures": 136,
+          "calls": 136,
+          "contractPassed": 119,
+          "contractTotal": 136,
+          "costUsd": 1.708786
+        },
+        "attack": {
+          "fixtures": 95,
+          "calls": 95,
+          "contractPassed": 85,
+          "contractTotal": 95,
+          "costUsd": 1.17915
+        },
+        "multi-turn": {
+          "fixtures": 19,
+          "calls": 39,
+          "contractPassed": 36,
+          "contractTotal": 39,
+          "costUsd": 0.489278
+        },
+        "long-summary": {
+          "fixtures": 10,
+          "calls": 20,
+          "contractPassed": 10,
+          "contractTotal": 10,
+          "costUsd": 0.176614
+        }
+      }
+    },
+    "gpt-6-sol": {
+      "fixtureCount": 260,
+      "modelCalls": 290,
+      "completedCalls": 290,
+      "costUsd": 2.304015,
+      "inputTokens": 1420611,
+      "cachedInputTokens": 764540,
+      "outputTokens": 51366,
+      "promptVersion": "mow-mobile-v2",
+      "corpusHash": "802d6eb3f364b0bb6c33ce8ff9178e888824c669d56ecad8ce21760384467005",
+      "manifestHashes": [
+        "7b39d35239f0ab9ec855e3b70d2b5cf01527e867cfc03c93f3a10f30d3a0346e",
+        "163342e5df5b390ddf3b511a918d7eec78d6f11f4c5b7c664d841eec936136ed",
+        "aa4ab14eb5fc2256b9ef668805a08857c1a1cc99139c1ebc29334b22ec739201",
+        "7f86706fb8c121047e890727f3137d5f8c989ed110e45543c613d37e7e406748",
+        "fb9f8ce4eda5f686ecd32502455162541633a54074b3e0f5a2f59b931b58bf43",
+        "fbaee27cc2c5336f79b4a892eee5c1e2a4183561f33e0a86c406d126f76555a1",
+        "68fc3d94e2beea893d25ccef0a08c5a368c7571a9c65b2c417a069e7f9e560c2"
+      ],
+      "providerModelsVerified": true,
+      "contractPassed": 242,
+      "contractTotal": 280,
+      "latencyMedianMs": 3125,
+      "latencyP95Ms": 6681,
+      "byLocale": {
+        "ko": {
+          "fixtures": 61,
+          "calls": 66,
+          "contractPassed": 51,
+          "contractTotal": 64,
+          "costUsd": 0.551316
+        },
+        "en": {
+          "fixtures": 64,
+          "calls": 74,
+          "contractPassed": 66,
+          "contractTotal": 72,
+          "costUsd": 0.569408
+        },
+        "es": {
+          "fixtures": 44,
+          "calls": 49,
+          "contractPassed": 42,
+          "contractTotal": 47,
+          "costUsd": 0.381172
+        },
+        "pt": {
+          "fixtures": 44,
+          "calls": 49,
+          "contractPassed": 42,
+          "contractTotal": 47,
+          "costUsd": 0.397043
+        },
+        "ja": {
+          "fixtures": 47,
+          "calls": 52,
+          "contractPassed": 41,
+          "contractTotal": 50,
+          "costUsd": 0.405076
+        }
+      },
+      "byWorkflow": {
+        "coding_assist": {
+          "fixtures": 143,
+          "calls": 157,
+          "contractPassed": 124,
+          "contractTotal": 152,
+          "costUsd": 0.694264
+        },
+        "interpretation": {
+          "fixtures": 117,
+          "calls": 133,
+          "contractPassed": 118,
+          "contractTotal": 128,
+          "costUsd": 1.609751
+        }
+      },
+      "byCategory": {
+        "normal": {
+          "fixtures": 136,
+          "calls": 136,
+          "contractPassed": 111,
+          "contractTotal": 136,
+          "costUsd": 1.139253
+        },
+        "attack": {
+          "fixtures": 95,
+          "calls": 95,
+          "contractPassed": 89,
+          "contractTotal": 95,
+          "costUsd": 0.879213
+        },
+        "multi-turn": {
+          "fixtures": 19,
+          "calls": 39,
+          "contractPassed": 32,
+          "contractTotal": 39,
+          "costUsd": 0.139064
+        },
+        "long-summary": {
+          "fixtures": 10,
+          "calls": 20,
+          "contractPassed": 10,
+          "contractTotal": 10,
+          "costUsd": 0.146485
+        }
+      }
+    },
+    "gpt-6-luna": {
+      "fixtureCount": 260,
+      "modelCalls": 290,
+      "completedCalls": 290,
+      "costUsd": 0.130514,
+      "inputTokens": 1420252,
+      "cachedInputTokens": 764493,
+      "outputTokens": 81796,
+      "promptVersion": "mow-mobile-v2",
+      "corpusHash": "802d6eb3f364b0bb6c33ce8ff9178e888824c669d56ecad8ce21760384467005",
+      "manifestHashes": [
+        "79f547f83dfc0bf43f6361efb249e643b1a77f2e7b57890f51841dbe6ca17881",
+        "1445e00fc26440724de2d3d029ccf129fb7803e43557b878a8dedb9ad86e24e3",
+        "f67dfbf629fd1a0c93bc8e6e3da4af65e9842a5343326681f999652c8479fae1",
+        "4902b102fe0fe167d67347b81d16a71ca6c621101d06c39cfa468a9d7df90d45",
+        "0aea98d2a4fc6f957b504ad55df3e6f74d4abbd5e1293375344a4aa5fb04ae62",
+        "de68901fdf9af1283337b5be7414db06b4d1de4b9ef4f44cf502e4719611c9fd",
+        "a447284e232b043fc3df97e6591d1c54fa8d07b6431a91be6a92116b3ab81c74"
+      ],
+      "providerModelsVerified": true,
+      "contractPassed": 247,
+      "contractTotal": 280,
+      "latencyMedianMs": 3357,
+      "latencyP95Ms": 11365,
+      "byLocale": {
+        "ko": {
+          "fixtures": 61,
+          "calls": 66,
+          "contractPassed": 53,
+          "contractTotal": 64,
+          "costUsd": 0.031555
+        },
+        "en": {
+          "fixtures": 64,
+          "calls": 74,
+          "contractPassed": 66,
+          "contractTotal": 72,
+          "costUsd": 0.032354
+        },
+        "es": {
+          "fixtures": 44,
+          "calls": 49,
+          "contractPassed": 43,
+          "contractTotal": 47,
+          "costUsd": 0.021526
+        },
+        "pt": {
+          "fixtures": 44,
+          "calls": 49,
+          "contractPassed": 44,
+          "contractTotal": 47,
+          "costUsd": 0.021865
+        },
+        "ja": {
+          "fixtures": 47,
+          "calls": 52,
+          "contractPassed": 41,
+          "contractTotal": 50,
+          "costUsd": 0.023214
+        }
+      },
+      "byWorkflow": {
+        "coding_assist": {
+          "fixtures": 143,
+          "calls": 157,
+          "contractPassed": 128,
+          "contractTotal": 152,
+          "costUsd": 0.040832
+        },
+        "interpretation": {
+          "fixtures": 117,
+          "calls": 133,
+          "contractPassed": 119,
+          "contractTotal": 128,
+          "costUsd": 0.089682
+        }
+      },
+      "byCategory": {
+        "normal": {
+          "fixtures": 136,
+          "calls": 136,
+          "contractPassed": 114,
+          "contractTotal": 136,
+          "costUsd": 0.067894
+        },
+        "attack": {
+          "fixtures": 95,
+          "calls": 95,
+          "contractPassed": 90,
+          "contractTotal": 95,
+          "costUsd": 0.045539
+        },
+        "multi-turn": {
+          "fixtures": 19,
+          "calls": 39,
+          "contractPassed": 33,
+          "contractTotal": 39,
+          "costUsd": 0.008664
+        },
+        "long-summary": {
+          "fixtures": 10,
+          "calls": 20,
+          "contractPassed": 10,
+          "contractTotal": 10,
+          "costUsd": 0.008417
+        }
+      }
+    }
+  }
+}

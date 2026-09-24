@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "ef803294b327b4532812781e483fe3fdd46800b8aa46eefa0ecb756937c4b356",
+                               "canonicalSha256":  "d5f9a220e1ab00e5422c397d1ccfd8740716a20772c7a6665783e2ee7462f190",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
@@ -58,7 +58,7 @@
                            {
                                "id":  "root-changelog",
                                "canonical":  "CHANGELOG.md",
-                               "canonicalSha256":  "90657a0aa3d7db16407b76b36a5c8c5c3c78b1e166b875db2cc03c97cd16b78d",
+                               "canonicalSha256":  "00d22ad5417b6eabe3853a93b18485d3607da6b57b4b94f3eca425c468f06d69",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "CHANGELOG.en.md",
@@ -233,6 +233,18 @@
                                                     "ja":  "v2-nextjs/releases/v2.2.13/README.ja.md",
                                                     "es":  "v2-nextjs/releases/v2.2.13/README.es.md",
                                                     "pt-BR":  "v2-nextjs/releases/v2.2.13/README.pt-BR.md"
+                                                }
+                           },
+                           {
+                               "id":  "v3.0.0-release-note",
+                               "canonical":  "v3-web/releases/v3.0.0/README.md",
+                               "canonicalSha256":  "ac56c26e986aa94e8208b3aac0ad7877edcf9ceebc7645ca1ec852fb00ae1018",
+                                 "reviewStatus":  "reviewed",
+                               "translations":  {
+                                                    "en":  "v3-web/releases/v3.0.0/README.en.md",
+                                                    "ja":  "v3-web/releases/v3.0.0/README.ja.md",
+                                                    "es":  "v3-web/releases/v3.0.0/README.es.md",
+                                                    "pt-BR":  "v3-web/releases/v3.0.0/README.pt-BR.md"
                                                 }
                            }
                        ],

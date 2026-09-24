@@ -4,6 +4,12 @@
 
 Este documento apresenta as versões públicas de `exner-rorschach-structural-summary-calculator` em ordem cronológica inversa. A partir da v2.2.1, quando uma alteração pode afetar os resultados do cálculo, as notas correspondentes explicam primeiro as condições afetadas e se resultados anteriores precisam ser recalculados.
 
+## [v3] Lançamentos do aplicativo web pago
+
+| Data | Versão | Tipo | Notas | Serviço |
+| --- | --- | --- | --- | --- |
+| 2026-09-24 | v3.0.0 | versão principal | [notas](./v3-web/releases/v3.0.0/README.pt-BR.md) · [comparação de modelos](./v3-web/benchmarks/2026-09-23/) · [evidências da configuração](./v3-web/benchmarks/2026-09-24/) | [exner.app](https://exner.app) |
+
 ## [v2] Histórico de versões da versão 2
 
 | Data | Versão | Tipo | Notas | Código-fonte |

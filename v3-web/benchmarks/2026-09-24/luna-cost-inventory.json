@@ -1,0 +1,323 @@
+{
+  "schema": "luna-cost-inventory/v1",
+  "basis": "stored-private-run-files-only",
+  "caveats": [
+    "OpenAI amounts are stored token-usage-based calculations, not invoice verification.",
+    "Claude CLI list amounts are not confirmed cash charges.",
+    "Other experiments and provider calls without a stored cost are excluded.",
+    "Repeated provider IDs are flagged and must be reconciled before claiming a total."
+  ],
+  "runCount": 26,
+  "duplicateProviderFiles": 0,
+  "openaiUsdFromStoredFiles": 2.369002,
+  "claudeCliListUsdFromStoredFiles": 117.300407,
+  "rows": [
+    {
+      "run": "luna-actual-top-eight-20260924",
+      "openaiPricedFiles": 7,
+      "openaiUsd": 0.002313,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-broad-reference-20260924",
+      "openaiPricedFiles": 30,
+      "openaiUsd": 0.050874,
+      "claudePricedFiles": 16,
+      "claudeCliListUsd": 9.027898,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-fast-diagnostic-20260924",
+      "openaiPricedFiles": 40,
+      "openaiUsd": 0.045559,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-fast-terra-search-pair-20260924",
+      "openaiPricedFiles": 180,
+      "openaiUsd": 1.436198,
+      "claudePricedFiles": 66,
+      "claudeCliListUsd": 26.86016475,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-5.6-terra",
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-low-r-boundary-v7-20260924",
+      "openaiPricedFiles": 60,
+      "openaiUsd": 0.081013,
+      "claudePricedFiles": 20,
+      "claudeCliListUsd": 9.822691,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-low-r-five-language-20260924",
+      "openaiPricedFiles": 43,
+      "openaiUsd": 0.051915,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-low-r-five-language-v4-20260924",
+      "openaiPricedFiles": 60,
+      "openaiUsd": 0.06218,
+      "claudePricedFiles": 20,
+      "claudeCliListUsd": 10.129531,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-low-r-repair-31-20260924",
+      "openaiPricedFiles": 12,
+      "openaiUsd": 0.011931,
+      "claudePricedFiles": 6,
+      "claudeCliListUsd": 3.1136605,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-low-r-repair-40-20260924",
+      "openaiPricedFiles": 12,
+      "openaiUsd": 0.010825,
+      "claudePricedFiles": 6,
+      "claudeCliListUsd": 2.8279505,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-low-r-v5-focus-20260924",
+      "openaiPricedFiles": 30,
+      "openaiUsd": 0.034716,
+      "claudePricedFiles": 10,
+      "claudeCliListUsd": 4.9824575,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-oracle-reference-20260924",
+      "openaiPricedFiles": 7,
+      "openaiUsd": 0.002394,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-prompt-effort-20260924",
+      "openaiPricedFiles": 8,
+      "openaiUsd": 0.008738,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-prompt-repair-4-20260924",
+      "openaiPricedFiles": 12,
+      "openaiUsd": 0.021885,
+      "claudePricedFiles": 3,
+      "claudeCliListUsd": 1.81167025,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-prompt-repair-40-20260924",
+      "openaiPricedFiles": 12,
+      "openaiUsd": 0.011607,
+      "claudePricedFiles": 2,
+      "claudeCliListUsd": 0.8811135,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-retrieval-probe-20260924",
+      "openaiPricedFiles": 0,
+      "openaiUsd": 0,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": []
+    },
+    {
+      "run": "luna-retrieval-probe-20260924-v2",
+      "openaiPricedFiles": 0,
+      "openaiUsd": 0,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 7,
+      "invalidCostFiles": 0,
+      "models": []
+    },
+    {
+      "run": "luna-review-20260924",
+      "openaiPricedFiles": 0,
+      "openaiUsd": 0,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": []
+    },
+    {
+      "run": "luna-review-20260924-v2",
+      "openaiPricedFiles": 0,
+      "openaiUsd": 0,
+      "claudePricedFiles": 11,
+      "claudeCliListUsd": 9.32987425,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": []
+    },
+    {
+      "run": "luna-review-20260924-v3",
+      "openaiPricedFiles": 0,
+      "openaiUsd": 0,
+      "claudePricedFiles": 16,
+      "claudeCliListUsd": 14.21843125,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": []
+    },
+    {
+      "run": "luna-summary-five-language-20260924",
+      "openaiPricedFiles": 30,
+      "openaiUsd": 0.033595,
+      "claudePricedFiles": 15,
+      "claudeCliListUsd": 3.20503725,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-5.6-terra",
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-summary-followup-20260924",
+      "openaiPricedFiles": 30,
+      "openaiUsd": 0.138705,
+      "claudePricedFiles": 15,
+      "claudeCliListUsd": 5.25069725,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-5.6-terra",
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-summary-followup-clarified-20260924",
+      "openaiPricedFiles": 20,
+      "openaiUsd": 0.094422,
+      "claudePricedFiles": 10,
+      "claudeCliListUsd": 3.5706975,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-5.6-terra",
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-summary-provenance-v8-20260924",
+      "openaiPricedFiles": 60,
+      "openaiUsd": 0.011906,
+      "claudePricedFiles": 10,
+      "claudeCliListUsd": 5.3630875,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-summary-provenance-v8-age-transfer-20260924",
+      "openaiPricedFiles": 30,
+      "openaiUsd": 0.008375,
+      "claudePricedFiles": 5,
+      "claudeCliListUsd": 2.71062375,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-summary-retraction-v9-20260924",
+      "openaiPricedFiles": 90,
+      "openaiUsd": 0.011541,
+      "claudePricedFiles": 15,
+      "claudeCliListUsd": 4.19482125,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-6-luna"
+      ]
+    },
+    {
+      "run": "luna-terra-search-pair-pilot-20260924",
+      "openaiPricedFiles": 20,
+      "openaiUsd": 0.23831,
+      "claudePricedFiles": 0,
+      "claudeCliListUsd": 0,
+      "providerFilesWithoutPrice": 0,
+      "invalidCostFiles": 0,
+      "models": [
+        "gpt-5.6-terra",
+        "gpt-6-luna"
+      ]
+    }
+  ]
+}

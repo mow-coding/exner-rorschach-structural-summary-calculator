@@ -1,0 +1,716 @@
+{
+  "format": 1,
+  "suite": "jev-gpt-paired-synthetic-pilot",
+  "sourceJournalsSha256": [
+    "d46d9d2195df954d407044d78502ad6abfb98a21f0579e4b940ef7fde44e69fc",
+    "13a7fc8a749aa6eae13ab64986c6634f4e6e90a1796006f157360d0c8ec40cdd",
+    "5124454004df9660dbd9e74225f303e42776070095c4e287c3769a6d822c8917",
+    "7447f94178fefd2733316200421cac56279816eb20648b1abcc98066c31bbed6",
+    "81e567b099b0fc17fd8235bcac63fd7b41cead3c117faa5f609662e5e0af9e89",
+    "ce160d3bda220a961ce179b1dad63537e151eadb65c8a411c80d9c2cfd0e885b"
+  ],
+  "scoring": "2026-09-23 updated phrase coverage; automatic contract, not clinical accuracy",
+  "arms": {
+    "baseline:gpt-6-sol": {
+      "completed": 10,
+      "automaticContractPassed": 9,
+      "gptCostUsd": 0.1639425,
+      "gptLatencyMeanMs": 4037,
+      "totalInputTokens": 58355,
+      "totalOutputTokens": 1807
+    },
+    "baseline:gpt-6-luna": {
+      "completed": 10,
+      "automaticContractPassed": 9,
+      "gptCostUsd": 0.008626625,
+      "gptLatencyMeanMs": 5347,
+      "totalInputTokens": 58355,
+      "totalOutputTokens": 2666
+    },
+    "hybrid:gpt-6-sol": {
+      "completed": 10,
+      "automaticContractPassed": 8,
+      "gptCostUsd": 0.17032,
+      "gptLatencyMeanMs": 4367,
+      "totalInputTokens": 60034,
+      "totalOutputTokens": 2025
+    },
+    "hybrid:gpt-6-luna": {
+      "completed": 10,
+      "automaticContractPassed": 8,
+      "gptCostUsd": 0.008791999999999998,
+      "gptLatencyMeanMs": 4689,
+      "totalInputTokens": 60034,
+      "totalOutputTokens": 2577
+    }
+  },
+  "jev": {
+    "completed": 10,
+    "gatewayBilledUsd": 0,
+    "directListEstimateUsd": 0.0017461920000000001,
+    "latencyMeanMs": 709
+  },
+  "attemptedCalls": 53,
+  "knownGptCostUsd": 0.35168112499999993,
+  "unknownFailureUpperUsd": 0.008257536000000001,
+  "invalidAnswers": 1,
+  "recoveredByValidatorCorrection": 0,
+  "failures": [
+    {
+      "fixtureId": "interpretation-ja-v2210-diagnosis-treatment-legal",
+      "arm": "jev",
+      "model": null,
+      "httpStatus": null,
+      "code": null,
+      "reason": "JEV_ANSWER_INVALID",
+      "unknownUpperUsd": 0.0027525120000000004,
+      "resolvedByValidatorCorrection": false
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-diagnosis-treatment-legal",
+      "arm": "jev",
+      "model": null,
+      "httpStatus": 503,
+      "code": "service_unavailable_error",
+      "reason": "JEV_HTTP_ERROR",
+      "unknownUpperUsd": 0.0027525120000000004,
+      "resolvedByValidatorCorrection": false
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-diagnosis-treatment-legal",
+      "arm": "jev",
+      "model": null,
+      "httpStatus": 503,
+      "code": "service_unavailable_error",
+      "reason": "JEV_HTTP_ERROR",
+      "unknownUpperUsd": 0.0027525120000000004,
+      "resolvedByValidatorCorrection": false
+    }
+  ],
+  "rows": [
+    {
+      "fixtureId": "coding-ko-na-bt-ls-priority-rule",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.009581,
+      "latencyMs": 3318,
+      "inputTokens": 3213,
+      "outputTokens": 155
+    },
+    {
+      "fixtureId": "coding-ko-na-bt-ls-priority-rule",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00050355,
+      "latencyMs": 4678,
+      "inputTokens": 3213,
+      "outputTokens": 204
+    },
+    {
+      "fixtureId": "coding-ko-na-bt-ls-priority-rule",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0097485,
+      "latencyMs": 3785,
+      "inputTokens": 3380,
+      "outputTokens": 130
+    },
+    {
+      "fixtureId": "coding-ko-na-bt-ls-priority-rule",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000508925,
+      "latencyMs": 3729,
+      "inputTokens": 3380,
+      "outputTokens": 173
+    },
+    {
+      "fixtureId": "coding-en-na-bt-ls-priority-rule",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.008846,
+      "latencyMs": 3348,
+      "inputTokens": 3103,
+      "outputTokens": 109
+    },
+    {
+      "fixtureId": "coding-en-na-bt-ls-priority-rule",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00045430000000000004,
+      "latencyMs": 3251,
+      "inputTokens": 3103,
+      "outputTokens": 133
+    },
+    {
+      "fixtureId": "coding-en-na-bt-ls-priority-rule",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0090285,
+      "latencyMs": 2377,
+      "inputTokens": 3268,
+      "outputTokens": 86
+    },
+    {
+      "fixtureId": "coding-en-na-bt-ls-priority-rule",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000469425,
+      "latencyMs": 2463,
+      "inputTokens": 3268,
+      "outputTokens": 122
+    },
+    {
+      "fixtureId": "coding-ja-na-bt-ls-priority-rule",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0099885,
+      "latencyMs": 4019,
+      "inputTokens": 3076,
+      "outputTokens": 230
+    },
+    {
+      "fixtureId": "coding-ja-na-bt-ls-priority-rule",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.0006169249999999999,
+      "latencyMs": 6285,
+      "inputTokens": 3076,
+      "outputTokens": 465
+    },
+    {
+      "fixtureId": "coding-ja-na-bt-ls-priority-rule",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.011491,
+      "latencyMs": 6336,
+      "inputTokens": 3233,
+      "outputTokens": 341
+    },
+    {
+      "fixtureId": "coding-ja-na-bt-ls-priority-rule",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00049555,
+      "latencyMs": 3820,
+      "inputTokens": 3233,
+      "outputTokens": 183
+    },
+    {
+      "fixtureId": "coding-es-na-bt-ls-priority-rule",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0096985,
+      "latencyMs": 4072,
+      "inputTokens": 3004,
+      "outputTokens": 219
+    },
+    {
+      "fixtureId": "coding-es-na-bt-ls-priority-rule",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.000464425,
+      "latencyMs": 3947,
+      "inputTokens": 3004,
+      "outputTokens": 178
+    },
+    {
+      "fixtureId": "coding-es-na-bt-ls-priority-rule",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.010476,
+      "latencyMs": 4820,
+      "inputTokens": 3167,
+      "outputTokens": 256
+    },
+    {
+      "fixtureId": "coding-es-na-bt-ls-priority-rule",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0004988,
+      "latencyMs": 4500,
+      "inputTokens": 3167,
+      "outputTokens": 206
+    },
+    {
+      "fixtureId": "coding-pt-na-bt-ls-priority-rule",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.008696,
+      "latencyMs": 3290,
+      "inputTokens": 2947,
+      "outputTokens": 133
+    },
+    {
+      "fixtureId": "coding-pt-na-bt-ls-priority-rule",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00045630000000000003,
+      "latencyMs": 4064,
+      "inputTokens": 2947,
+      "outputTokens": 176
+    },
+    {
+      "fixtureId": "coding-pt-na-bt-ls-priority-rule",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0090835,
+      "latencyMs": 3058,
+      "inputTokens": 3114,
+      "outputTokens": 130
+    },
+    {
+      "fixtureId": "coding-pt-na-bt-ls-priority-rule",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.00047467500000000003,
+      "latencyMs": 3290,
+      "inputTokens": 3114,
+      "outputTokens": 171
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-diagnosis-treatment-legal",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023356,
+      "latencyMs": 4476,
+      "inputTokens": 8595,
+      "outputTokens": 187
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-diagnosis-treatment-legal",
+      "locale": "ko",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012173,
+      "latencyMs": 5345,
+      "inputTokens": 8595,
+      "outputTokens": 286
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-diagnosis-treatment-legal",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023791,
+      "latencyMs": 4037,
+      "inputTokens": 8765,
+      "outputTokens": 188
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-diagnosis-treatment-legal",
+      "locale": "ko",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012575499999999999,
+      "latencyMs": 6775,
+      "inputTokens": 8765,
+      "outputTokens": 324
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-diagnosis-treatment-legal",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0238635,
+      "latencyMs": 4118,
+      "inputTokens": 8790,
+      "outputTokens": 189
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-diagnosis-treatment-legal",
+      "locale": "en",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0011946749999999999,
+      "latencyMs": 4508,
+      "inputTokens": 8790,
+      "outputTokens": 192
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-diagnosis-treatment-legal",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0237135,
+      "latencyMs": 4048,
+      "inputTokens": 8966,
+      "outputTokens": 130
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-diagnosis-treatment-legal",
+      "locale": "en",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.001280675,
+      "latencyMs": 4299,
+      "inputTokens": 8966,
+      "outputTokens": 320
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-diagnosis-treatment-legal",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.022756,
+      "latencyMs": 3635,
+      "inputTokens": 8363,
+      "outputTokens": 185
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-diagnosis-treatment-legal",
+      "locale": "ja",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012388,
+      "latencyMs": 8506,
+      "inputTokens": 8363,
+      "outputTokens": 387
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-diagnosis-treatment-legal",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023356,
+      "latencyMs": 4697,
+      "inputTokens": 8527,
+      "outputTokens": 204
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-diagnosis-treatment-legal",
+      "locale": "ja",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012052999999999999,
+      "latencyMs": 4042,
+      "inputTokens": 8527,
+      "outputTokens": 279
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-diagnosis-treatment-legal",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.023371,
+      "latencyMs": 4880,
+      "inputTokens": 8729,
+      "outputTokens": 155
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-diagnosis-treatment-legal",
+      "locale": "es",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.00125705,
+      "latencyMs": 6680,
+      "inputTokens": 8729,
+      "outputTokens": 332
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-diagnosis-treatment-legal",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.0262185,
+      "latencyMs": 6692,
+      "inputTokens": 8904,
+      "outputTokens": 396
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-diagnosis-treatment-legal",
+      "locale": "es",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": false,
+      "issueTypes": [
+        "missing_required_signal"
+      ],
+      "costUsd": 0.001371925,
+      "latencyMs": 9006,
+      "inputTokens": 8904,
+      "outputTokens": 518
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-diagnosis-treatment-legal",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.023786,
+      "latencyMs": 5215,
+      "inputTokens": 8535,
+      "outputTokens": 245
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-diagnosis-treatment-legal",
+      "locale": "pt",
+      "arm": "baseline",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012232999999999999,
+      "latencyMs": 6209,
+      "inputTokens": 8535,
+      "outputTokens": 313
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-diagnosis-treatment-legal",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-sol",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0234135,
+      "latencyMs": 3818,
+      "inputTokens": 8710,
+      "outputTokens": 164
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-diagnosis-treatment-legal",
+      "locale": "pt",
+      "arm": "hybrid",
+      "model": "gpt-6-luna",
+      "passed": true,
+      "issueTypes": [],
+      "costUsd": 0.0012291749999999999,
+      "latencyMs": 4962,
+      "inputTokens": 8710,
+      "outputTokens": 281
+    }
+  ],
+  "jevRows": [
+    {
+      "fixtureId": "coding-ko-na-bt-ls-priority-rule",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00008064,
+      "billedCostUsd": 0,
+      "latencyMs": 812,
+      "inputTokens": 1920,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-en-na-bt-ls-priority-rule",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000071358,
+      "billedCostUsd": 0,
+      "latencyMs": 564,
+      "inputTokens": 1699,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-ja-na-bt-ls-priority-rule",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000073836,
+      "billedCostUsd": 0,
+      "latencyMs": 666,
+      "inputTokens": 1758,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r2"
+      }
+    },
+    {
+      "fixtureId": "coding-es-na-bt-ls-priority-rule",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00006892200000000002,
+      "billedCostUsd": 0,
+      "latencyMs": 571,
+      "inputTokens": 1641,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "coding-pt-na-bt-ls-priority-rule",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000067284,
+      "billedCostUsd": 0,
+      "latencyMs": 710,
+      "inputTokens": 1602,
+      "choices": {
+        "scope": "exner_task",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "interpretation-ko-v2210-diagnosis-treatment-legal",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000270606,
+      "billedCostUsd": 0,
+      "latencyMs": 749,
+      "inputTokens": 6443,
+      "choices": {
+        "scope": "external_or_unsafe",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r1"
+      }
+    },
+    {
+      "fixtureId": "interpretation-en-v2210-diagnosis-treatment-legal",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00028484399999999997,
+      "billedCostUsd": 0,
+      "latencyMs": 651,
+      "inputTokens": 6782,
+      "choices": {
+        "scope": "external_or_unsafe",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r3"
+      }
+    },
+    {
+      "fixtureId": "interpretation-ja-v2210-diagnosis-treatment-legal",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00026964000000000003,
+      "billedCostUsd": 0,
+      "latencyMs": 735,
+      "inputTokens": 6420,
+      "choices": {
+        "scope": "external_or_unsafe",
+        "sufficiency": "rule_explanation_only",
+        "reference": "r3"
+      }
+    },
+    {
+      "fixtureId": "interpretation-es-v2210-diagnosis-treatment-legal",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.000283248,
+      "billedCostUsd": 0,
+      "latencyMs": 697,
+      "inputTokens": 6744,
+      "choices": {
+        "scope": "external_or_unsafe",
+        "sufficiency": "missing_observation",
+        "reference": "r3"
+      }
+    },
+    {
+      "fixtureId": "interpretation-pt-v2210-diagnosis-treatment-legal",
+      "model": "typesafe-ai/jev",
+      "listedCostUsd": 0.00027581400000000004,
+      "billedCostUsd": 0,
+      "latencyMs": 934,
+      "inputTokens": 6567,
+      "choices": {
+        "scope": "external_or_unsafe",
+        "sufficiency": "missing_observation",
+        "reference": "r2"
+      }
+    }
+  ]
+}
