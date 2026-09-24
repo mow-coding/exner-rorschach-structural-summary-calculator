@@ -4,7 +4,7 @@
 
 This is the public source and release archive for the `Exner Rorschach Comprehensive System Structural Summary Calculator`. Reference-grounded AI assistants are available as optional features.
 
-This repository publishes the patch notes and source code for released versions. v1 is preserved as a Google Apps Script web app, and v2 as the current version 2 web app.
+This repository records release notes and source code reviewed for public sharing. v1 is preserved as a Google Apps Script app and v2 as the free version 2 web app. The new paid v3.0.0 web app is at `exner.app`. We will publish v3 production source in reviewed portions after security and rights checks.
 
 MOW plans, builds, deploys, operates, and maintains the web app. The Seoul Institute of Clinical Psychology (SICP) contributes to checking the initial calculation results and reviewing the app from the perspective of real clinical use.
 
@@ -19,6 +19,7 @@ Each patch note explains what changed, the conditions that may be affected, whet
 
 ## What is available
 
+- [v3.0.0] Paid web app: [exner.app](https://exner.app) · [release notes](./v3-web/releases/v3.0.0/README.en.md) · [AI model comparison](./v3-web/benchmarks/2026-09-23/) · [release-configuration evidence](./v3-web/benchmarks/2026-09-24/)
 - [v2] Live web app: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
 - [v2] Latest version 2 release: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/README.en.md)
 - [v2] v2.2.10 calculation sources and literature scope: [calculation sources and literature scope](./v2-nextjs/methodology/reference-audit-v2.2.10/README.en.md)

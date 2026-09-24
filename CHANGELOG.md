@@ -4,6 +4,12 @@
 
 이 문서는 `exner-rorschach-structural-summary-calculator`의 공개 릴리즈를 최신순으로 정리합니다. v2.2.1부터 계산 결과에 영향을 줄 수 있는 변경은 각 패치노트에서 영향 조건과 기존 결과의 재계산 필요 여부를 먼저 설명합니다.
 
+## [v3] 유료 웹앱 릴리즈 기록
+
+| Date | Version | Type | Release note | Service |
+| --- | --- | --- | --- | --- |
+| 2026-09-24 | v3.0.0 | 메이저 패치 | [릴리즈 노트](./v3-web/releases/v3.0.0/) · [모델 비교](./v3-web/benchmarks/2026-09-23/) · [출시 설정 검증](./v3-web/benchmarks/2026-09-24/) | [exner.app](https://exner.app) |
+
 ## [v2] 버전 2 릴리즈 기록
 
 | Date | Version | Type | Patch Note | Source |

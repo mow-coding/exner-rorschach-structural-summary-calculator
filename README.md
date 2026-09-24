@@ -4,7 +4,7 @@
 
 `Exner 로샤 종합체계 구조요약 계산기`의 공개 소스 및 릴리즈 아카이브입니다. 관련 문서에 근거한 AI 도우미는 선택 기능으로 제공합니다.
 
-이 저장소는 배포된 버전의 패치노트와 소스코드를 공개하기 위한 공간입니다. v1은 Google Apps Script 웹앱으로, v2는 현재 버전 2 웹앱으로 정리했습니다.
+이 저장소는 배포된 버전의 패치노트와 공개 범위를 확인한 소스코드를 기록합니다. v1은 Google Apps Script, v2는 무료 버전 2 웹앱으로 보존합니다. 새 유료 웹앱 v3.0.0은 `exner.app`에서 제공합니다. v3 운영 소스의 공개는 보안·권리 검토를 거쳐 단계적으로 진행합니다.
 
 MOW(모오)는 웹앱의 기획, 제작, 배포, 운영과 유지보수를 맡습니다. 서울임상심리연구소(Seoul Institute of Clinical Psychology, SICP)는 초기 계산 결과 확인과 실제 임상 사용 관점의 검토에 기여합니다.
 
@@ -19,6 +19,7 @@ MOW(모오)는 웹앱의 기획, 제작, 배포, 운영과 유지보수를 맡�
 
 ## 현재 공개된 항목
 
+- [v3.0.0] 유료 웹앱: [exner.app](https://exner.app) · [다섯 언어 릴리즈 노트](./v3-web/releases/v3.0.0/) · [AI 모델 비교](./v3-web/benchmarks/2026-09-23/) · [출시 설정 검증](./v3-web/benchmarks/2026-09-24/)
 - [v2] 라이브 웹앱: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
 - [v2] 버전 2 최신 릴리즈: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/)
 - [v2] v2.2.10 계산 근거와 문헌 범위: [계산 근거와 문헌 범위](./v2-nextjs/methodology/reference-audit-v2.2.10/)

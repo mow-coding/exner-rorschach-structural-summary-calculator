@@ -4,7 +4,7 @@
 
 `エクスナー・ロールシャッハ包括システム構造一覧表計算機`の公開ソースおよびリリースアーカイブです。関連文書に基づくAIアシスタントは、任意で利用できる機能として提供しています。
 
-このリポジトリは、公開済みバージョンのパッチノートとソースコードを収録しています。v1はGoogle Apps Scriptウェブアプリ、v2は現在のバージョン2ウェブアプリとして整理しています。
+このリポジトリには、公開済みのリリースノートと公開範囲を確認したソースコードを収録します。v1はGoogle Apps Script、v2は無料のバージョン2ウェブアプリとして保存します。新しい有料ウェブアプリv3.0.0は`exner.app`で提供します。v3運用ソースは安全性と権利を確認した範囲から順次公開します。
 
 MOW（モオ）は、ウェブアプリの企画、制作、配布、運用、保守を担当します。ソウル臨床心理研究所（Seoul Institute of Clinical Psychology, SICP）は、初期の計算結果の確認と実際の臨床利用の観点からの検討に貢献します。
 
@@ -19,6 +19,7 @@ MOW（モオ）は、ウェブアプリの企画、制作、配布、運用、�
 
 ## 公開している内容
 
+- [v3.0.0] 有料ウェブアプリ: [exner.app](https://exner.app) · [リリースノート](./v3-web/releases/v3.0.0/README.ja.md) · [AIモデル比較](./v3-web/benchmarks/2026-09-23/) · [公開設定の検証](./v3-web/benchmarks/2026-09-24/)
 - [v2] 公開ウェブアプリ: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
 - [v2] バージョン2の最新リリース: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/README.ja.md)
 - [v2] v2.2.10の計算根拠と文献範囲: [計算根拠と文献範囲](./v2-nextjs/methodology/reference-audit-v2.2.10/README.ja.md)

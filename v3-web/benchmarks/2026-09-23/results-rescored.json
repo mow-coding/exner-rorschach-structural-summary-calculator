@@ -1,0 +1,205 @@
+{
+  "format": 1,
+  "source": "same archived synthetic answers as results.json",
+  "method": "offline contract re-score only; no new model calls; not clinical accuracy",
+  "models": {
+    "gpt-5.6-terra": {
+      "originalPassed": 250,
+      "rescoredPassed": 257,
+      "total": 280,
+      "byLocale": {
+        "ko": {
+          "originalPassed": 54,
+          "rescoredPassed": 57,
+          "total": 64
+        },
+        "en": {
+          "originalPassed": 65,
+          "rescoredPassed": 66,
+          "total": 72
+        },
+        "ja": {
+          "originalPassed": 43,
+          "rescoredPassed": 43,
+          "total": 50
+        },
+        "es": {
+          "originalPassed": 45,
+          "rescoredPassed": 47,
+          "total": 47
+        },
+        "pt": {
+          "originalPassed": 43,
+          "rescoredPassed": 44,
+          "total": 47
+        }
+      },
+      "byWorkflow": {
+        "coding_assist": {
+          "originalPassed": 132,
+          "rescoredPassed": 135,
+          "total": 152
+        },
+        "interpretation": {
+          "originalPassed": 118,
+          "rescoredPassed": 122,
+          "total": 128
+        }
+      },
+      "byCategory": {
+        "normal": {
+          "originalPassed": 119,
+          "rescoredPassed": 122,
+          "total": 136
+        },
+        "attack": {
+          "originalPassed": 85,
+          "rescoredPassed": 88,
+          "total": 95
+        },
+        "long-summary": {
+          "originalPassed": 10,
+          "rescoredPassed": 10,
+          "total": 10
+        },
+        "multi-turn": {
+          "originalPassed": 36,
+          "rescoredPassed": 37,
+          "total": 39
+        }
+      }
+    },
+    "gpt-6-sol": {
+      "originalPassed": 242,
+      "rescoredPassed": 254,
+      "total": 280,
+      "byLocale": {
+        "ko": {
+          "originalPassed": 51,
+          "rescoredPassed": 57,
+          "total": 64
+        },
+        "en": {
+          "originalPassed": 66,
+          "rescoredPassed": 68,
+          "total": 72
+        },
+        "ja": {
+          "originalPassed": 41,
+          "rescoredPassed": 43,
+          "total": 50
+        },
+        "es": {
+          "originalPassed": 42,
+          "rescoredPassed": 42,
+          "total": 47
+        },
+        "pt": {
+          "originalPassed": 42,
+          "rescoredPassed": 44,
+          "total": 47
+        }
+      },
+      "byWorkflow": {
+        "coding_assist": {
+          "originalPassed": 124,
+          "rescoredPassed": 133,
+          "total": 152
+        },
+        "interpretation": {
+          "originalPassed": 118,
+          "rescoredPassed": 121,
+          "total": 128
+        }
+      },
+      "byCategory": {
+        "normal": {
+          "originalPassed": 111,
+          "rescoredPassed": 117,
+          "total": 136
+        },
+        "attack": {
+          "originalPassed": 89,
+          "rescoredPassed": 93,
+          "total": 95
+        },
+        "long-summary": {
+          "originalPassed": 10,
+          "rescoredPassed": 10,
+          "total": 10
+        },
+        "multi-turn": {
+          "originalPassed": 32,
+          "rescoredPassed": 34,
+          "total": 39
+        }
+      }
+    },
+    "gpt-6-luna": {
+      "originalPassed": 247,
+      "rescoredPassed": 255,
+      "total": 280,
+      "byLocale": {
+        "ko": {
+          "originalPassed": 53,
+          "rescoredPassed": 57,
+          "total": 64
+        },
+        "en": {
+          "originalPassed": 66,
+          "rescoredPassed": 67,
+          "total": 72
+        },
+        "ja": {
+          "originalPassed": 41,
+          "rescoredPassed": 42,
+          "total": 50
+        },
+        "es": {
+          "originalPassed": 43,
+          "rescoredPassed": 45,
+          "total": 47
+        },
+        "pt": {
+          "originalPassed": 44,
+          "rescoredPassed": 44,
+          "total": 47
+        }
+      },
+      "byWorkflow": {
+        "coding_assist": {
+          "originalPassed": 128,
+          "rescoredPassed": 132,
+          "total": 152
+        },
+        "interpretation": {
+          "originalPassed": 119,
+          "rescoredPassed": 123,
+          "total": 128
+        }
+      },
+      "byCategory": {
+        "normal": {
+          "originalPassed": 114,
+          "rescoredPassed": 117,
+          "total": 136
+        },
+        "attack": {
+          "originalPassed": 90,
+          "rescoredPassed": 93,
+          "total": 95
+        },
+        "long-summary": {
+          "originalPassed": 10,
+          "rescoredPassed": 10,
+          "total": 10
+        },
+        "multi-turn": {
+          "originalPassed": 33,
+          "rescoredPassed": 35,
+          "total": 39
+        }
+      }
+    }
+  }
+}

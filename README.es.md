@@ -4,7 +4,7 @@
 
 Este es el archivo público de código fuente y versiones de la `Calculadora del Sumario Estructural del Sistema Comprehensivo de Rorschach de Exner`. Los asistentes de IA basados en los documentos de referencia se ofrecen como funciones opcionales.
 
-Este repositorio publica las notas de las versiones distribuidas y su código fuente. v1 se conserva como aplicación web de Google Apps Script y v2 como la aplicación web actual de la versión 2.
+Este repositorio conserva las notas de versión y el código fuente revisado para su publicación. v1 se preserva como aplicación de Google Apps Script y v2 como aplicación web gratuita de la versión 2. La nueva aplicación de pago v3.0.0 está en `exner.app`. Publicaremos el código de producción de v3 por partes tras revisar seguridad y derechos.
 
 MOW se encarga de la planificación, el desarrollo, la distribución, la operación y el mantenimiento de la aplicación. El Seoul Institute of Clinical Psychology (SICP) contribuye a comprobar los resultados de cálculo iniciales y a revisar la aplicación desde la perspectiva del uso clínico real.
 
@@ -19,6 +19,7 @@ Cada nota de versión explica los cambios, las condiciones que podrían verse af
 
 ## Contenido publicado
 
+- [v3.0.0] Aplicación web de pago: [exner.app](https://exner.app) · [notas de versión](./v3-web/releases/v3.0.0/README.es.md) · [comparación de IA](./v3-web/benchmarks/2026-09-23/) · [pruebas de configuración](./v3-web/benchmarks/2026-09-24/)
 - [v2] Aplicación web: [exner.yesucan.co.kr](https://exner.yesucan.co.kr)
 - [v2] Versión 2 más reciente: [v2-nextjs/releases/v2.2.13](./v2-nextjs/releases/v2.2.13/README.es.md)
 - [v2] Fuentes de cálculo y alcance bibliográfico de v2.2.10: [fuentes de cálculo y alcance bibliográfico](./v2-nextjs/methodology/reference-audit-v2.2.10/README.es.md)

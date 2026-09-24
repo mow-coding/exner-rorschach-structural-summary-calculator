@@ -4,6 +4,12 @@
 
 This document lists the public releases of `exner-rorschach-structural-summary-calculator` in reverse chronological order. Beginning with v2.2.1, each patch note for a change that may affect calculation results explains the affected condition and whether existing results need to be recalculated.
 
+## [v3] Paid web app releases
+
+| Date | Version | Type | Release note | Service |
+| --- | --- | --- | --- | --- |
+| 2026-09-24 | v3.0.0 | major release | [release notes](./v3-web/releases/v3.0.0/README.en.md) · [model comparison](./v3-web/benchmarks/2026-09-23/) · [release-configuration evidence](./v3-web/benchmarks/2026-09-24/) | [exner.app](https://exner.app) |
+
 ## [v2] Version 2 release history
 
 | Date | Version | Type | Patch Note | Source |
