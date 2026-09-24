@@ -24,4 +24,12 @@ These instructions apply to the public showcase repository.
 - Use `docs/localization/clinical-terminology.json` and verify uncertain wording against `docs/localization/TERMINOLOGY_SOURCES.md` plus independent authoritative research.
 - Add every managed group to `docs/localization/manifest.json`. Keep new or changed groups in `draft` until factual parity and independent target-language review are complete.
 - Run `scripts/verify-public-document-locales.ps1 -AllowDraft` while editing. Publication requires the strict command without `-AllowDraft` to pass.
+- A request-level technical evidence ledger may remain in one language when its findings are summarized and linked from the five reader-facing release notes; do not disguise such a ledger as a translated reader-facing report.
 - Do not commit, push, open a pull request, publish a release, or deploy unless the user explicitly requests it.
+
+## AI Model Provenance
+
+- Before each AI experiment or AI-assisted document review, record the provider, exact public model name and API/CLI model ID, version, reasoning/thinking setting, processing tier, assigned role, and how the setting was verified. Preserve the observed usage and cost basis afterward.
+- Spell out model generations in comparisons (for example, `GPT-5.6 Terra` and `GPT-6 Luna`). Do not label a result only `Terra`, `Sol`, or `Luna` when multiple generations could be confused.
+- Separate model defaults from explicitly supplied settings. If the model ID, thinking level, tier, or actual charge cannot be verified, write `not captured` or `unknown`; never infer it from a product name or current defaults.
+- Keep the run-by-run technical ledger in public benchmark evidence or a private source record as appropriate. Reader-facing release notes must link to that ledger and accurately distinguish model-generated draft, AI review, and human clinical review.
