@@ -297,6 +297,14 @@ foreach ($group in $manifest.documentGroups) {
   }
 
   $canonicalText = Get-NormalizedText -Path $canonicalPath
+  if ($group.id -eq 'root-readme') {
+    $changelogText = Get-NormalizedText -Path (Join-Path $repoRoot 'CHANGELOG.md')
+    $latestRelease = [regex]::Match($changelogText, '(?m)^\|\s*\d{4}-\d{2}-\d{2}\s*\|\s*(v\d+\.\d+\.\d+)\s*\|')
+    $rootVersions = @([regex]::Matches($canonicalText, '(?<![A-Za-z0-9])v\d+\.\d+\.\d+(?![A-Za-z0-9])') | ForEach-Object { $_.Value } | Sort-Object -Unique)
+    if (-not $latestRelease.Success -or $rootVersions.Count -ne 1 -or $rootVersions[0] -ne $latestRelease.Groups[1].Value) {
+      $errors.Add('[root-readme/ko] Root README must mention only the latest release version from the first CHANGELOG row.')
+    }
+  }
   $canonicalHash = Get-Sha256 -Text $canonicalText
   if ($UpdateHashes) {
     $group.canonicalSha256 = $canonicalHash
@@ -335,6 +343,12 @@ foreach ($group in $manifest.documentGroups) {
     }
 
     $translationText = Get-NormalizedText -Path $translationPath
+    if ($group.id -eq 'root-readme' -and $latestRelease.Success) {
+      $translationVersions = @([regex]::Matches($translationText, '(?<![A-Za-z0-9])v\d+\.\d+\.\d+(?![A-Za-z0-9])') | ForEach-Object { $_.Value } | Sort-Object -Unique)
+      if ($translationVersions.Count -ne 1 -or $translationVersions[0] -ne $latestRelease.Groups[1].Value) {
+        $errors.Add("[root-readme/$locale] Root README must mention only the latest release version from the first CHANGELOG row.")
+      }
+    }
     Assert-SequenceEqual -Label 'heading structure' -Expected $canonicalHeadings -Actual (Get-HeadingShape -Text $translationText) -GroupId $group.id -Locale $locale
     $translationLinks = @(Get-LinkTargets -Text $translationText)
     if ($canonicalLinks.Count -ne $translationLinks.Count) {

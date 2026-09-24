@@ -10,6 +10,8 @@ This project keeps a private production repository and a public showcase archive
 
 This standard exists so release notes, README files, version archive entries, and public evidence documents stay consistent across releases.
 
+The repository-root README is a brief introduction to the latest released version. At each release, replace its five localized versions with the current product summary and current release links. Do not add a running list of older versions there; keep that history in the localized CHANGELOG and version directories.
+
 Public release prose is written first for clinicians. Engineering evidence, publication operations, and internal verification records belong in separate technical or private records, not in the release note.
 
 ## Scope
@@ -205,7 +207,7 @@ Release documents must distinguish between closing a specific engineering scope 
 When preparing a release:
 
 1. Add or update the app version in `package.json`, `package-lock.json`, footer version display, and `lib/versionArchive.ts`.
-2. Add the new release entry at the top of the public README release list.
+2. Replace the public root README's five localized summaries so they describe only the latest released version and link to its release notes and evidence.
 3. Add the new release row at the top of the public `CHANGELOG.md` table.
 4. Update `v2-nextjs/README.md` so the latest patch note points to the new release.
 5. Add `v2-nextjs/releases/vX.Y.Z/README.md`.
