@@ -2,10 +2,17 @@
 
 [한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
 
-La versión actual es **v3.0.0**. Exner es una aplicación web que ayuda a revisar la codificación y el Sumario Estructural del Sistema Comprehensivo de Rorschach. Está disponible en coreano, inglés, japonés, español y portugués brasileño.
+Exner ayuda a revisar la codificación y el Sumario Estructural del Sistema Comprehensivo de Rorschach.
 
-[Acceder a la aplicación](https://exner.app) · **US$3.99 al mes** o **US$42.99 al año**
+## Versiones anteriores
 
-Incluye una calculadora del Sumario Estructural y asistentes de codificación e interpretación basados en **GPT-6 Luna**. Las sugerencias de IA sirven de apoyo; la decisión final corresponde al profesional, a partir de la respuesta original y del registro de la fase de encuesta.
+- **v1 · Google Apps Script** — Comenzó como una herramienta de apoyo para calcular el Sumario Estructural. [Notas de versión y archivo del código fuente de v1](./v1-gas/README.es.md)
+- **v2 · Next.js** — Pasó a ser una aplicación web gratuita y añadió funciones opcionales de IA con la propia clave de API del usuario. [Aplicación gratuita v2](https://exner.yesucan.co.kr) · [Notas de versión y archivo del código fuente de v2](./v2-nextjs/README.es.md)
 
-Las [notas de v3.0.0](./v3-web/releases/v3.0.0/README.es.md) explican las funciones y limitaciones. La [comparación de modelos](./v3-web/benchmarks/2026-09-23/) y la [evaluación posterior](./v3-web/benchmarks/2026-09-24/) recogen los métodos, resultados y costos. El código completo de producción de v3 aún no se ha publicado. La [guía de licencias](./LICENSES.md) aclara los derechos y el alcance del material publicado.
+## Última versión: v3.0.0
+
+La calculadora del Sumario Estructural incorpora asistentes de codificación e interpretación, disponibles con una cuenta de Google y una suscripción. Ambos utilizan **GPT-6 Luna**. Las pantallas y los materiales de referencia de la aplicación están disponibles en coreano, inglés, japonés, español y portugués brasileño. Las fórmulas del Sumario Estructural no han cambiado, por lo que esta versión por sí sola no exige volver a calcular los registros existentes.
+
+[Acceder a la aplicación](https://exner.app) · La suscripción cuesta **US$3.99 al mes** o **US$42.99 al año**. Las sugerencias de IA sirven de apoyo; la decisión final corresponde al examinador, a partir de la respuesta original y del registro de la fase de encuesta.
+
+Las [notas de v3.0.0](./v3-web/releases/v3.0.0/README.es.md) explican las funciones y limitaciones. La [comparación de modelos](./v3-web/benchmarks/2026-09-23/) y la [evaluación posterior](./v3-web/benchmarks/2026-09-24/) recogen los métodos, resultados y costos. También puede consultar el [historial completo de versiones](./CHANGELOG.es.md). El código completo de producción de v3 aún no se ha publicado; la [guía de licencias](./LICENSES.md) aclara los derechos y el alcance del material publicado.
