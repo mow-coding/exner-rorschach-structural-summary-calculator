@@ -10,7 +10,7 @@ This project keeps a private production repository and a public showcase archive
 
 This standard exists so release notes, README files, version archive entries, and public evidence documents stay consistent across releases.
 
-The repository-root README is a brief introduction to the latest released version. At each release, replace its five localized versions with the current product summary and current release links. Do not add a running list of older versions there; keep that history in the localized CHANGELOG and version directories.
+The repository-root README briefly introduces each earlier major version (currently v1 and v2) with an archive link, then gives the latest released version more space. At each release, replace the latest-version summary and links in all five localized READMEs. When a new major version arrives, move the former current version to one short archive entry and update the locale checker. Do not accumulate older patch summaries there; keep detailed history in the localized CHANGELOG and version directories.
 
 Public release prose is written first for clinicians. Engineering evidence, publication operations, and internal verification records belong in separate technical or private records, not in the release note.
 
@@ -207,7 +207,7 @@ Release documents must distinguish between closing a specific engineering scope 
 When preparing a release:
 
 1. Add or update the app version in `package.json`, `package-lock.json`, footer version display, and `lib/versionArchive.ts`.
-2. Replace the public root README's five localized summaries so they describe only the latest released version and link to its release notes and evidence.
+2. In all five public root READMEs, retain concise introductions and archive links for earlier major versions; replace the current-version summary and links with the latest release.
 3. Add the new release row at the top of the public `CHANGELOG.md` table.
 4. Update `v2-nextjs/README.md` so the latest patch note points to the new release.
 5. Add `v2-nextjs/releases/vX.Y.Z/README.md`.

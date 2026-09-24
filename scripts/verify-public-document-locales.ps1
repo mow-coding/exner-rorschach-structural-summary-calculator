@@ -302,7 +302,13 @@ foreach ($group in $manifest.documentGroups) {
     $latestRelease = [regex]::Match($changelogText, '(?m)^\|\s*\d{4}-\d{2}-\d{2}\s*\|\s*(v\d+\.\d+\.\d+)\s*\|')
     $rootVersions = @([regex]::Matches($canonicalText, '(?<![A-Za-z0-9])v\d+\.\d+\.\d+(?![A-Za-z0-9])') | ForEach-Object { $_.Value } | Sort-Object -Unique)
     if (-not $latestRelease.Success -or $rootVersions.Count -ne 1 -or $rootVersions[0] -ne $latestRelease.Groups[1].Value) {
-      $errors.Add('[root-readme/ko] Root README must mention only the latest release version from the first CHANGELOG row.')
+      $errors.Add('[root-readme/ko] Root README may name only the latest release as a full patch version from the first CHANGELOG row.')
+    }
+    foreach ($earlierVersion in @('v1', 'v2')) {
+      $archiveDir = if ($earlierVersion -eq 'v1') { 'v1-gas' } else { 'v2-nextjs' }
+      if ($canonicalText -notmatch "(?m)^-\s+\*\*$earlierVersion\b" -or $canonicalText -notmatch "\]\(\./$archiveDir/README\.md\)") {
+        $errors.Add("[root-readme/ko] Add a brief $earlierVersion introduction and its archive README link.")
+      }
     }
   }
   $canonicalHash = Get-Sha256 -Text $canonicalText
@@ -346,7 +352,13 @@ foreach ($group in $manifest.documentGroups) {
     if ($group.id -eq 'root-readme' -and $latestRelease.Success) {
       $translationVersions = @([regex]::Matches($translationText, '(?<![A-Za-z0-9])v\d+\.\d+\.\d+(?![A-Za-z0-9])') | ForEach-Object { $_.Value } | Sort-Object -Unique)
       if ($translationVersions.Count -ne 1 -or $translationVersions[0] -ne $latestRelease.Groups[1].Value) {
-        $errors.Add("[root-readme/$locale] Root README must mention only the latest release version from the first CHANGELOG row.")
+        $errors.Add("[root-readme/$locale] Root README may name only the latest release as a full patch version from the first CHANGELOG row.")
+      }
+      foreach ($earlierVersion in @('v1', 'v2')) {
+        $archiveDir = if ($earlierVersion -eq 'v1') { 'v1-gas' } else { 'v2-nextjs' }
+        if ($translationText -notmatch "(?m)^-\s+\*\*$earlierVersion\b" -or $translationText -notmatch "\]\(\./$archiveDir/README\.$locale\.md\)") {
+          $errors.Add("[root-readme/$locale] Add a brief $earlierVersion introduction and its localized archive README link.")
+        }
       }
     }
     Assert-SequenceEqual -Label 'heading structure' -Expected $canonicalHeadings -Actual (Get-HeadingShape -Text $translationText) -GroupId $group.id -Locale $locale

@@ -2,10 +2,17 @@
 
 [한국어](./README.md) | [English](./README.en.md) | [日本語](./README.ja.md) | [Español](./README.es.md) | [Português (Brasil)](./README.pt-BR.md)
 
-The current release is **v3.0.0**. Exner is a web app that helps clinicians review Rorschach Comprehensive System coding and Structural Summaries. It is available in Korean, English, Japanese, Spanish, and Brazilian Portuguese.
+Exner helps review Rorschach Comprehensive System coding and Structural Summaries.
 
-[Use the web app](https://exner.app) · **US$3.99/month** or **US$42.99/year**
+## Earlier versions
 
-The app includes a Structural Summary calculator and **GPT-6 Luna** coding and interpretation assistants. AI suggestions are supporting information; the clinician makes the final judgment from the original response and inquiry record.
+- **v1 · Google Apps Script** — Began as a Structural Summary calculation aid. [v1 release notes and source archive](./v1-gas/README.en.md)
+- **v2 · Next.js** — Moved to a free web app and added optional AI features using your own API key. [Free v2 web app](https://exner.yesucan.co.kr) · [v2 release notes and source archive](./v2-nextjs/README.en.md)
 
-The [v3.0.0 release notes](./v3-web/releases/v3.0.0/README.en.md) cover features and limitations. The [model comparison](./v3-web/benchmarks/2026-09-23/) and [follow-up evaluation](./v3-web/benchmarks/2026-09-24/) report methods, results, and costs. The complete v3 production source has not yet been published. See the [license guide](./LICENSES.md) for the rights and scope of published material.
+## Latest release: v3.0.0
+
+The existing Structural Summary calculator now includes coding and interpretation assistants available with a Google account and subscription. Both use **GPT-6 Luna**. The app screens and reference materials are available in Korean, English, Japanese, Spanish, and Brazilian Portuguese. The Structural Summary formulas have not changed, so this release alone does not require recalculating existing records.
+
+[Use the web app](https://exner.app) · Subscriptions cost **US$3.99 per month** or **US$42.99 per year**. AI suggestions are supporting information; the examiner makes the final judgment from the original response and inquiry record.
+
+The [v3.0.0 release notes](./v3-web/releases/v3.0.0/README.en.md) cover features and limitations. The [model comparison](./v3-web/benchmarks/2026-09-23/) and [follow-up evaluation](./v3-web/benchmarks/2026-09-24/) report methods, results, and costs. You can also browse the [full release history](./CHANGELOG.en.md). The complete v3 production source has not yet been published; see the [license guide](./LICENSES.md) for the rights and scope of published material.

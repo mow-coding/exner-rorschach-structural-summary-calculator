@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "ece6fdcea119c569f6723d556f30a80506c11dfb156b48eb0d9af7e0de6a1812",
+                               "canonicalSha256":  "d2ecf554a74f133d49f3eceefbcb96c9e0cbc3c903ce17a7da24adc81c31eac0",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
