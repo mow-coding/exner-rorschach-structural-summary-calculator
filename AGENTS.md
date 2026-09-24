@@ -11,6 +11,7 @@ These instructions apply to the public showcase repository.
 ## Public Writing
 
 - Read `v2-nextjs/source/docs/ops/PUBLIC_RELEASE_DOCUMENTATION.md` before editing reader-facing documents.
+- The repository-root README in all five languages is a short introduction to the **latest released version only**. At every release, replace its version, app link, current offer, and release-note/evidence links; do not append older versions, release lists, or historical feature summaries. Keep history in `CHANGELOG*` and the version directories. Review all five README files together before publishing.
 - Read the complete v1 GAS release-note series before a repository-wide voice rewrite. For routine work, also read the latest two v2 notes, the root README, and the root CHANGELOG.
 - Treat the owner-authored v1 GAS patch notes as protected historical originals. Do not rewrite, modernize, or shorten them. Revert a later non-owner insertion only when an exact preserved original proves the difference; otherwise obtain the owner's explicit approval before any v1 edit.
 - Write the released product story, not the draft history. Do not narrate agent conversations, internal approval, rejected drafts, or audience strategy.
@@ -26,6 +27,12 @@ These instructions apply to the public showcase repository.
 - Run `scripts/verify-public-document-locales.ps1 -AllowDraft` while editing. Publication requires the strict command without `-AllowDraft` to pass.
 - A request-level technical evidence ledger may remain in one language when its findings are summarized and linked from the five reader-facing release notes; do not disguise such a ledger as a translated reader-facing report.
 - Do not commit, push, open a pull request, publish a release, or deploy unless the user explicitly requests it.
+
+## Versioned Rights
+
+- Read `LICENSES.md` before changing license, attribution, or publication scope. Keep a license and copyright notice in each published version directory; do not use the repository-root license alone to imply that one party owns every version.
+- Preserve existing MIT grants and original notices for previously published work. Attribute SICP and MOW only for their respective contributions. A different license for a future, newly published work requires an explicit rights decision and cannot retroactively withdraw the MIT permission already granted for earlier copies.
+- Publishing new v3 operating source requires a separate secret, patient-data, third-party-rights, and ownership review. Documentation under `v3-web/` does not imply that the private operating source has been published or licensed.
 
 ## AI Model Provenance
 
