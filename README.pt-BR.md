@@ -11,7 +11,7 @@ O Exner ajuda a revisar a codificação e o Sumário Estrutural do Sistema Compr
 
 ## Versão mais recente: v3.0.0
 
-A calculadora do Sumário Estrutural ganhou assistentes de codificação e interpretação, disponíveis com uma conta Google e uma assinatura. Ambos usam **GPT-6 Luna**. As telas e os materiais de referência do aplicativo estão disponíveis em coreano, inglês, japonês, espanhol e português brasileiro. As fórmulas do Sumário Estrutural não mudaram; portanto, esta versão, por si só, não exige recalcular os registros existentes.
+Na v2, cada pessoa conectava sua própria chave de API da OpenAI para usar os assistentes de codificação e interpretação. Na v3, o serviço fornece o limite de uso de IA, com contas Google, conversas salvas e assinaturas mensais e anuais. A calculadora do Sumário Estrutural e os documentos de referência continuam gratuitos sem uma conta. Ambos os assistentes usam **GPT-6 Luna**. As telas e os materiais de referência do aplicativo estão disponíveis em coreano, inglês, japonês, espanhol e português brasileiro. As fórmulas do Sumário Estrutural não mudaram; portanto, esta versão, por si só, não exige recalcular os registros existentes.
 
 [Acessar o aplicativo](https://exner.app) · A assinatura custa **US$3.99 por mês** ou **US$42.99 por ano**. As sugestões de IA servem de apoio; a decisão final cabe ao examinador, com base na resposta original e no registro do inquérito.
 
