@@ -11,7 +11,7 @@ Exner ayuda a revisar la codificación y el Sumario Estructural del Sistema Comp
 
 ## Última versión: v3.0.0
 
-La calculadora del Sumario Estructural incorpora asistentes de codificación e interpretación, disponibles con una cuenta de Google y una suscripción. Ambos utilizan **GPT-6 Luna**. Las pantallas y los materiales de referencia de la aplicación están disponibles en coreano, inglés, japonés, español y portugués brasileño. Las fórmulas del Sumario Estructural no han cambiado, por lo que esta versión por sí sola no exige volver a calcular los registros existentes.
+En v2, cada usuario conectaba su propia clave API de OpenAI para usar los asistentes de codificación e interpretación. En v3, el servicio proporciona la asignación de uso de IA y se incorporan cuentas de Google, conversaciones guardadas y suscripciones mensuales y anuales. La calculadora del Sumario Estructural y los documentos de referencia siguen siendo gratuitos sin cuenta. Ambos asistentes utilizan **GPT-6 Luna**. Las pantallas y los materiales de referencia de la aplicación están disponibles en coreano, inglés, japonés, español y portugués brasileño. Las fórmulas del Sumario Estructural no han cambiado, por lo que esta versión por sí sola no exige volver a calcular los registros existentes.
 
 [Acceder a la aplicación](https://exner.app) · La suscripción cuesta **US$3.99 al mes** o **US$42.99 al año**. Las sugerencias de IA sirven de apoyo; la decisión final corresponde al examinador, a partir de la respuesta original y del registro de la fase de encuesta.
 

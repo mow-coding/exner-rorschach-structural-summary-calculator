@@ -46,7 +46,7 @@
                            {
                                "id":  "root-readme",
                                "canonical":  "README.md",
-                               "canonicalSha256":  "d2ecf554a74f133d49f3eceefbcb96c9e0cbc3c903ce17a7da24adc81c31eac0",
+                               "canonicalSha256":  "6b243e515c910b0f4d59bbde9b7a3e8b73c93d1600fdf6749169da6604b26847",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "README.en.md",
@@ -238,7 +238,7 @@
                            {
                                "id":  "v3.0.0-release-note",
                                "canonical":  "v3-web/releases/v3.0.0/README.md",
-                               "canonicalSha256":  "4bfc9ef0c3a574832a4715744483abb81c1af3e86a45f6e311072b0bc276cc64",
+                               "canonicalSha256":  "d34554d78e3afe39a9e97385b16fabe8267bb220c0e5946767677318b8795e7d",
                                "reviewStatus":  "reviewed",
                                "translations":  {
                                                     "en":  "v3-web/releases/v3.0.0/README.en.md",

@@ -11,7 +11,7 @@ Exner helps review Rorschach Comprehensive System coding and Structural Summarie
 
 ## Latest release: v3.0.0
 
-The existing Structural Summary calculator now includes coding and interpretation assistants available with a Google account and subscription. Both use **GPT-6 Luna**. The app screens and reference materials are available in Korean, English, Japanese, Spanish, and Brazilian Portuguese. The Structural Summary formulas have not changed, so this release alone does not require recalculating existing records.
+In v2, users connected their own OpenAI API keys to the coding and interpretation assistants. In v3, the service provides the AI usage allowance, with Google accounts, saved conversations, and monthly and annual subscriptions. The Structural Summary calculator and reference documents remain free without an account. Both assistants use **GPT-6 Luna**. The app screens and reference materials are available in Korean, English, Japanese, Spanish, and Brazilian Portuguese. The Structural Summary formulas have not changed, so this release alone does not require recalculating existing records.
 
 [Use the web app](https://exner.app) · Subscriptions cost **US$3.99 per month** or **US$42.99 per year**. AI suggestions are supporting information; the examiner makes the final judgment from the original response and inquiry record.
 
